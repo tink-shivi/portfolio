@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivangi Tripathi — Product Manager</title>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css2?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:#FAF7F2;--cream-dark:#F2EDE4;--violet:#6B3FA0;--violet-light:#8B5FC0;--violet-dark:#4A2878;--violet-bg:#F0E8FF;--coral:#E8634A;--coral-light:#FF8066;--coral-bg:#FFF0ED;--dark:#1C0F2E;--charcoal:#2C2016;--text:#2C2016;--text-muted:#7A6E65;--border:rgba(44,32,22,0.12);--border-strong:rgba(44,32,22,0.25);--white:#FFFFFF;--shadow-sm:0 2px 8px rgba(107,63,160,0.08);--shadow-md:0 4px 20px rgba(107,63,160,0.12);--shadow-lg:0 8px 40px rgba(107,63,160,0.15);--shadow-hover:0 12px 40px rgba(232,99,74,0.2);--radius:12px;--radius-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Satoshi',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.4;}
+h1,h2,h3,h4,h5{font-family:'Cabinet Grotesk',sans-serif;font-weight:800;line-height:1.1;letter-spacing:-0.02em;}
+.container{max-width:1140px;margin:0 auto;padding:0 32px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,247,242,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:72px;display:flex;align-items:center;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1140px;margin:0 auto;padding:0 32px;}
+.nav-logo{font-family:'Cabinet Grotesk',sans-serif;font-weight:900;font-size:20px;color:var(--violet);text-decoration:none;letter-spacing:-0.03em;cursor:pointer;}
+.nav-logo span{color:var(--coral);}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+.nav-links a{font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:8px 14px;border-radius:8px;transition:all 0.2s ease;letter-spacing:0.02em;cursor:pointer;}
+.nav-links a:hover,.nav-links a.active{color:var(--violet);background:var(--violet-bg);}
+.nav-cta{background:var(--violet)!important;color:var(--white)!important;border-radius:8px!important;}
+.nav-cta:hover{background:var(--violet-dark)!important;color:var(--white)!important;}
+.nav-cta.active{background:var(--violet-dark)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;z-index:200;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s ease;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(250,247,242,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:16px 20px 24px;z-index:99;flex-direction:column;gap:4px;box-shadow:0 8px 24px rgba(44,32,22,0.1);}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'DM Mono',monospace;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:12px 16px;border-radius:8px;transition:all 0.2s ease;cursor:pointer;}
+.mobile-menu a:hover{color:var(--violet);background:var(--violet-bg);}
+.mobile-menu .mobile-cta{background:var(--violet);color:var(--white)!important;text-align:center;margin-top:8px;border-radius:8px;}
+.page{display:none;}
+.page.active{display:block;}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--violet);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding:6px 12px;background:var(--violet-bg);border-radius:100px;border:1px solid rgba(107,63,160,0.2);}
+.section-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--violet);flex-shrink:0;}
+.section-title{font-size:clamp(36px,5vw,56px);font-weight:900;letter-spacing:-0.03em;margin-bottom:16px;}
+.section-title .accent{color:var(--coral);}
+.page-header-nav{display:flex;flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:20px;}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:12px;color:var(--text-muted);cursor:pointer;transition:color 0.2s;text-decoration:none;white-space:nowrap;}
+.back-link:hover{color:var(--violet);}
+.back-link-light{color:rgba(255,255,255,0.5);}
+.back-link-light:hover{color:rgba(255,255,255,0.85);}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--violet);color:var(--white);font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;padding:14px 28px;border-radius:10px;text-decoration:none;transition:all 0.2s ease;border:none;cursor:pointer;}
+.btn-primary:hover{background:var(--violet-dark);transform:translateY(-2px);box-shadow:var(--shadow-hover);}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text);font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;padding:14px 28px;border-radius:10px;text-decoration:none;border:1.5px solid var(--border-strong);transition:all 0.2s ease;cursor:pointer;}
+.btn-secondary:hover{border-color:var(--violet);color:var(--violet);background:var(--violet-bg);}
+.tag-pill{font-family:'DM Mono',monospace;font-size:10px;padding:4px 10px;border-radius:100px;background:var(--cream);color:var(--text-muted);border:1px solid var(--border);text-transform:uppercase;letter-spacing:0.04em;}
+.project-company-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;font-weight:500;padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.06em;}
+.tag-voyce{background:var(--violet-bg);color:var(--violet);}
+.tag-quso{background:var(--coral-bg);color:var(--coral);}
+.tag-ticker{background:#E8F4F0;color:#2A7A5F;}
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.tool-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.tool-pill{font-family:'DM Mono',monospace;font-size:11px;padding:6px 12px;border-radius:100px;background:var(--cream);color:var(--text-muted);border:1px solid var(--border);}
+#hero{min-height:100vh;padding-top:72px;display:flex;align-items:center;position:relative;overflow:hidden;}
+.hero-bg-shapes{position:absolute;inset:0;pointer-events:none;z-index:0;}
+.hero-shape-1{position:absolute;top:10%;right:-5%;width:480px;height:480px;background:radial-gradient(circle,rgba(107,63,160,0.12) 0%,transparent 70%);border-radius:50%;}
+.hero-shape-2{position:absolute;bottom:10%;left:-5%;width:360px;height:360px;background:radial-gradient(circle,rgba(232,99,74,0.10) 0%,transparent 70%);border-radius:50%;}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;position:relative;z-index:1;width:100%;max-width:1140px;margin:0 auto;padding:80px 32px;}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;padding:6px 12px;border-radius:100px;border:1px solid var(--border);background:var(--white);color:var(--text-muted);letter-spacing:0.04em;text-transform:uppercase;}
+.badge-violet{border-color:rgba(107,63,160,0.3);background:var(--violet-bg);color:var(--violet);}
+.badge-coral{border-color:rgba(232,99,74,0.3);background:var(--coral-bg);color:var(--coral);}
+.badge-dark{border-color:var(--border-strong);background:var(--cream-dark);color:var(--charcoal);}
+.hero-title{font-size:clamp(52px,7vw,88px);font-weight:900;line-height:0.95;letter-spacing:-0.04em;margin-bottom:24px;}
+.hero-title .line-violet{color:var(--violet);}
+.hero-desc{font-size:18px;line-height:1.7;color:var(--text-muted);max-width:520px;margin-bottom:40px;}
+.hero-desc strong{color:var(--text);font-weight:700;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.hero-card{position:relative;}
+.hero-photo-wrap{position:relative;width:100%;aspect-ratio:3/4;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(135deg,var(--violet-bg) 0%,var(--coral-bg) 100%);border:1.5px solid var(--border);}
+.hero-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--text-muted);font-family:'DM Mono',monospace;font-size:12px;}
+.hero-stat-chip{position:absolute;background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:12px 16px;box-shadow:var(--shadow-md);}
+.hero-stat-chip .stat-num{font-family:'Cabinet Grotesk',sans-serif;font-weight:900;font-size:22px;color:var(--violet);line-height:1;}
+.hero-stat-chip .stat-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:2px;}
+.chip-1{bottom:24px;left:-24px;}
+.chip-2{top:32px;right:-20px;}
+.marquee-section{background:var(--dark);padding:18px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);}
+.marquee-track{display:flex;animation:marquee 32s linear infinite;white-space:nowrap;}
+.marquee-track:hover{animation-play-state:paused;}
+.marquee-item{display:inline-flex;align-items:center;gap:24px;padding:0 40px;font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;flex-shrink:0;}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--coral);opacity:0.6;flex-shrink:0;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.features-section{background:var(--white);padding:48px 0;}
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;}
+.feature-card{background:var(--white);padding:28px 24px;transition:all 0.25s ease;position:relative;}
+.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background 0.25s ease;}
+.feature-card:hover{background:var(--cream);}
+.feature-card:hover::before{background:var(--violet);}
+.feature-icon{width:40px;height:40px;border-radius:10px;background:var(--violet-bg);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--violet);}
+.feature-card h3{font-size:15px;font-weight:800;margin-bottom:6px;}
+.feature-card p{font-size:13px;color:var(--text-muted);line-height:1.6;}
+.about-section{background:var(--white);padding:56px 0 64px;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:40px;}
+.about-card{background:var(--cream);border-radius:var(--radius);padding:28px;border:1px solid var(--border);transition:all 0.25s ease;}
+.about-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(107,63,160,0.2);}
+.about-card-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.icon-violet{background:var(--violet-bg);}
+.icon-coral{background:var(--coral-bg);}
+.icon-dark{background:var(--cream-dark);}
+.about-card h3{font-size:16px;font-weight:800;margin-bottom:14px;}
+.about-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.about-card ul li{font-size:13px;color:var(--text-muted);padding-left:16px;position:relative;line-height:1.5;}
+.about-card ul li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--border-strong);}
+.about-card ul li strong{color:var(--text);font-weight:600;}
+.resume-link{display:inline-flex;align-items:center;gap:6px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:13px;color:var(--violet);margin-top:20px;padding:8px 0;border-bottom:1.5px solid var(--violet);transition:all 0.2s ease;cursor:pointer;}
+.resume-link:hover{color:var(--violet-dark);gap:10px;}
+.quote-strip{background:var(--violet);padding:48px 0;position:relative;overflow:hidden;}
+.quote-strip::before{content:'"';position:absolute;top:-30px;left:60px;font-family:'Cabinet Grotesk',sans-serif;font-size:300px;font-weight:900;color:rgba(255,255,255,0.05);line-height:1;pointer-events:none;}
+.quote-inner{max-width:820px;margin:0 auto;padding:0 32px;text-align:center;}
+.quote-text{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--white);line-height:1.5;letter-spacing:-0.02em;margin-bottom:20px;}
+.quote-attribution{font-family:'DM Mono',monospace;font-size:12px;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.08em;}
+.projects-home-section{background:var(--cream);padding:56px 0 64px;}
+.projects-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.project-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:all 0.3s ease;cursor:pointer;}
+.project-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover);border-color:rgba(107,63,160,0.25);}
+.project-card-top{padding:24px 24px 20px;flex:1;display:flex;flex-direction:column;gap:0;}
+.project-num{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;opacity:0.7;}
+.project-card-top .project-company-tag{margin-bottom:10px;}
+.project-card h3{font-size:17px;font-weight:800;line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;}
+.project-card p{font-size:13px;color:var(--text-muted);line-height:1.6;flex:1;}
+.project-card-bottom{padding:16px 24px 20px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:14px;}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px;min-height:28px;align-content:flex-start;}
+.project-cta{display:flex;align-items:center;gap:6px;font-family:'Cabinet Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--violet);transition:gap 0.2s ease;}
+.project-card:hover .project-cta{gap:10px;}
+.project-card-bar{height:4px;background:var(--border);transition:background 0.25s ease;}
+.project-card:hover .project-card-bar{background:var(--violet);}
+.project-card:nth-child(even):hover .project-card-bar{background:var(--coral);}
+.stats-strip{background:var(--dark);padding:56px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.08);}
+.stat-block{padding:36px 28px;background:var(--dark);text-align:center;transition:background 0.2s ease;}
+.stat-block:hover{background:rgba(107,63,160,0.15);}
+.stat-block .num{font-family:'Cabinet Grotesk',sans-serif;font-size:52px;font-weight:900;letter-spacing:-0.04em;color:var(--white);line-height:1;margin-bottom:8px;}
+.stat-block .num span{color:var(--coral);}
+.stat-block .label{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;line-height:1.4;}
+.thinking-section{background:var(--white);padding:56px 0 64px;}
+.thinking-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+.thinking-card{border-radius:var(--radius);padding:28px;border:1px solid var(--border);position:relative;overflow:hidden;transition:all 0.25s ease;}
+.thinking-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
+.thinking-card::after{content:attr(data-num);position:absolute;bottom:-20px;right:16px;font-family:'Cabinet Grotesk',sans-serif;font-size:100px;font-weight:900;color:rgba(0,0,0,0.04);line-height:1;pointer-events:none;}
+.tc-1{background:var(--violet-bg);border-color:rgba(107,63,160,0.2);}
+.tc-2{background:var(--coral-bg);border-color:rgba(232,99,74,0.2);}
+.tc-3{background:var(--cream-dark);}
+.tc-4{background:var(--dark);}
+.tc-5{background:var(--violet-bg);border-color:rgba(107,63,160,0.2);}
+.tc-6{background:var(--coral-bg);border-color:rgba(232,99,74,0.2);}
+.tc-4 h3,.tc-4 p{color:var(--white);}
+.tc-4 p{color:rgba(255,255,255,0.65);}
+.thinking-card h3{font-size:17px;font-weight:800;margin-bottom:10px;}
+.thinking-card p{font-size:13px;color:var(--text-muted);line-height:1.65;}
+.lab-section{background:var(--cream);padding:56px 0 64px;}
+.lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+.lab-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;}
+.lab-card-header{padding:20px 24px 16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.lab-card-header h3{font-size:15px;font-weight:800;}
+.lab-badge{font-family:'DM Mono',monospace;font-size:10px;padding:4px 8px;border-radius:100px;background:var(--violet-bg);color:var(--violet);text-transform:uppercase;letter-spacing:0.06em;}
+.lab-card-body{padding:20px 24px;}
+.ice-tool{display:flex;flex-direction:column;gap:14px;}
+.ice-row{display:flex;flex-direction:column;gap:6px;}
+.ice-label-row{display:flex;justify-content:space-between;align-items:center;}
+.ice-label{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;}
+.ice-val{font-family:'Cabinet Grotesk',sans-serif;font-size:15px;font-weight:800;color:var(--violet);min-width:24px;text-align:right;}
+.ice-slider{width:100%;height:4px;border-radius:4px;background:var(--cream-dark);outline:none;-webkit-appearance:none;cursor:pointer;}
+.ice-slider::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--violet);cursor:pointer;box-shadow:0 2px 6px rgba(107,63,160,0.35);}
+.ice-result{background:var(--cream);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--border);margin-top:4px;}
+.ice-score-num{font-family:'Cabinet Grotesk',sans-serif;font-size:36px;font-weight:900;color:var(--violet);line-height:1;}
+.ice-score-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;}
+.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.quiz-option{background:var(--cream);border:1.5px solid var(--border);border-radius:10px;padding:10px 12px;cursor:pointer;text-align:left;transition:all 0.2s ease;font-family:'Satoshi',sans-serif;font-size:12px;font-weight:600;color:var(--text);line-height:1.4;}
+.quiz-option:hover{border-color:var(--violet);background:var(--violet-bg);color:var(--violet);}
+.quiz-option.selected{border-color:var(--violet);background:var(--violet);color:var(--white);}
+.quiz-result{display:none;background:var(--cream);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--border);margin-top:10px;}
+.quiz-result.show{display:block;}
+.quiz-result-type{font-family:'Cabinet Grotesk',sans-serif;font-size:18px;font-weight:900;color:var(--violet);margin-bottom:5px;}
+.quiz-result-desc{font-size:12px;color:var(--text-muted);line-height:1.5;}
+.retention-tool{display:flex;flex-direction:column;gap:10px;}
+.retention-input-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.retention-input-wrap{display:flex;flex-direction:column;gap:4px;}
+.retention-input-wrap label{font-family:'DM Mono',monospace;font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;}
+.retention-input{width:100%;padding:7px;border:1.5px solid var(--border);border-radius:8px;font-family:'Cabinet Grotesk',sans-serif;font-size:14px;font-weight:700;text-align:center;background:var(--cream);color:var(--text);outline:none;transition:border-color 0.2s;}
+.retention-input:focus{border-color:var(--violet);}
+.retention-bars{display:flex;align-items:flex-end;gap:4px;height:72px;padding:0 4px;}
+.r-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end;}
+.r-bar{width:100%;border-radius:4px 4px 0 0;transition:height 0.4s ease;background:var(--violet);min-height:4px;}
+.r-bar-label{font-family:'DM Mono',monospace;font-size:8px;color:var(--text-muted);text-transform:uppercase;}
+.retention-insight{font-family:'DM Mono',monospace;font-size:11px;color:var(--violet);text-align:center;padding:8px;background:var(--violet-bg);border-radius:8px;line-height:1.5;}
+.edu-section{background:var(--white);padding:56px 0 64px;}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:40px;}
+.edu-block h4{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;color:var(--violet);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;}
+.edu-block ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.edu-block ul li{font-size:13px;color:var(--text-muted);padding-left:16px;position:relative;line-height:1.5;}
+.edu-block ul li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--border-strong);}
+.edu-block ul li strong{color:var(--text);font-weight:600;display:block;}
+.toolstack{margin-top:40px;padding-top:28px;border-top:1px solid var(--border);}
+.toolstack h4{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;color:var(--violet);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;}
+.contact-section{background:var(--dark);padding:80px 0;position:relative;overflow:hidden;}
+.contact-section::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(107,63,160,0.2) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+.contact-section::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(232,99,74,0.15) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+.contact-inner{position:relative;z-index:1;text-align:center;max-width:640px;margin:0 auto;}
+.contact-label{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--coral);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px;padding:6px 12px;background:rgba(232,99,74,0.12);border-radius:100px;border:1px solid rgba(232,99,74,0.25);}
+.contact-inner h2{font-size:clamp(40px,5vw,64px);font-weight:900;color:var(--white);letter-spacing:-0.03em;margin-bottom:16px;line-height:1.05;}
+.contact-inner h2 span{color:var(--coral);}
+.contact-inner p{font-size:17px;color:rgba(255,255,255,0.55);margin-bottom:40px;line-height:1.7;}
+.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.contact-link{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;text-decoration:none;transition:all 0.2s ease;cursor:pointer;}
+.contact-link-primary{background:var(--violet);color:var(--white);}
+.contact-link-primary:hover{background:var(--violet-light);transform:translateY(-2px);}
+.contact-link-secondary{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.12);}
+.contact-link-secondary:hover{background:rgba(255,255,255,0.12);color:var(--white);transform:translateY(-2px);}
+footer{background:var(--dark);padding:24px 0;border-top:1px solid rgba(255,255,255,0.06);}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto;padding:0 32px;}
+.footer-logo{font-family:'Cabinet Grotesk',sans-serif;font-weight:900;font-size:16px;color:var(--white);opacity:0.5;letter-spacing:-0.02em;}
+.footer-copy{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.04em;}
+.footer-back{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,0.4);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;transition:color 0.2s;cursor:pointer;}
+.footer-back:hover{color:var(--coral);}
+.page-projects{background:var(--cream);min-height:100vh;padding-top:72px;}
+.projects-page-header{background:var(--white);padding:40px 0 32px;border-bottom:1px solid var(--border);}
+.projects-page-header-inner{max-width:1140px;margin:0 auto;padding:0 32px;}
+.projects-page-title{font-size:clamp(40px,5vw,64px);font-weight:900;letter-spacing:-0.03em;margin-bottom:12px;margin-top:16px;}
+.projects-page-subtitle{font-size:17px;color:var(--text-muted);max-width:600px;margin-bottom:28px;}
+.filter-bar{display:flex;flex-wrap:wrap;gap:8px;}
+.filter-btn{font-family:'DM Mono',monospace;font-size:11px;padding:8px 16px;border-radius:100px;background:var(--cream);color:var(--text-muted);border:1.5px solid var(--border);cursor:pointer;transition:all 0.2s ease;text-transform:uppercase;letter-spacing:0.04em;}
+.filter-btn:hover,.filter-btn.active{background:var(--violet);color:var(--white);border-color:var(--violet);}
+.projects-all-grid{max-width:1140px;margin:0 auto;padding:48px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.page-resume{background:var(--cream);min-height:100vh;padding-top:72px;}
+.resume-header{background:var(--dark);padding:40px 0;position:relative;overflow:hidden;}
+.resume-header::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(107,63,160,0.25) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
+.resume-header-inner{max-width:1140px;margin:0 auto;padding:0 32px;position:relative;z-index:1;}
+.resume-header-inner h1{font-size:clamp(40px,5vw,64px);font-weight:900;color:var(--white);letter-spacing:-0.03em;margin-bottom:12px;margin-top:16px;}
+.resume-header-inner h1 span{color:var(--coral);}
+.resume-header-inner p{font-size:17px;color:rgba(255,255,255,0.55);max-width:560px;margin-bottom:28px;}
+.resume-header-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-download{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:var(--white);font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:15px;padding:14px 28px;border-radius:10px;text-decoration:none;transition:all 0.2s ease;border:none;cursor:pointer;}
+.btn-download:hover{background:var(--coral-light);transform:translateY(-2px);}
+.resume-body{max-width:1140px;margin:0 auto;padding:56px 32px;}
+.resume-section{margin-bottom:48px;}
+.resume-section-title{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--violet);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px;padding-bottom:10px;border-bottom:1.5px solid var(--border);}
+.resume-job{background:var(--white);border-radius:var(--radius);padding:28px;border:1px solid var(--border);margin-bottom:14px;}
+.resume-job-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.resume-job-title{font-family:'Cabinet Grotesk',sans-serif;font-size:18px;font-weight:800;color:var(--text);}
+.resume-job-company{font-family:'Cabinet Grotesk',sans-serif;font-size:15px;font-weight:700;color:var(--violet);margin-top:4px;}
+.resume-job-period{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;}
+.resume-job-section-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--violet);text-transform:uppercase;letter-spacing:0.08em;margin:18px 0 8px;}
+.resume-job ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.resume-job ul li{font-size:13px;color:var(--text-muted);padding-left:16px;position:relative;line-height:1.6;}
+.resume-job ul li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--violet);}
+.resume-skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.resume-skill-tag{font-family:'DM Mono',monospace;font-size:11px;padding:8px 12px;border-radius:8px;background:var(--white);border:1px solid var(--border);color:var(--text-muted);text-align:center;}
+.page-case-study{background:var(--cream);min-height:100vh;padding-top:72px;}
+.cs-header{background:var(--white);padding:40px 0 0;border-bottom:1px solid var(--border);}
+.cs-header-inner{max-width:1140px;margin:0 auto;padding:0 32px;}
+.cs-title{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-0.03em;margin-bottom:12px;max-width:800px;margin-top:16px;}
+.cs-subtitle{font-size:17px;color:var(--text-muted);max-width:640px;margin-bottom:28px;}
+.cs-skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
+.cs-body{max-width:1140px;margin:0 auto;padding:48px 32px;display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:start;}
+.cs-content{display:flex;flex-direction:column;}
+.cs-section{padding:36px 0;border-bottom:1px solid var(--border);}
+.cs-section:last-child{border-bottom:none;}
+.cs-section-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--violet);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.cs-section-title{font-size:22px;font-weight:800;margin-bottom:14px;letter-spacing:-0.02em;}
+.cs-section p{font-size:15px;color:var(--text-muted);line-height:1.8;margin-bottom:12px;}
+.cs-section p:last-child{margin-bottom:0;}
+.cs-section ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:12px;}
+.cs-section ul li{font-size:14px;color:var(--text-muted);padding-left:20px;position:relative;line-height:1.6;}
+.cs-section ul li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--violet);}
+.cs-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:16px;}
+.cs-sidebar-card{background:var(--white);border-radius:var(--radius);padding:22px;border:1px solid var(--border);}
+.cs-sidebar-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px;}
+.cs-metric{display:flex;flex-direction:column;gap:4px;padding:10px 0;border-bottom:1px solid var(--border);}
+.cs-metric:last-child{border-bottom:none;padding-bottom:0;}
+.cs-metric-num{font-family:'Cabinet Grotesk',sans-serif;font-size:28px;font-weight:900;color:var(--violet);line-height:1;}
+.cs-metric-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;}
+.like-btn{display:flex;align-items:center;gap:8px;background:var(--cream);border:1.5px solid var(--border);border-radius:100px;padding:10px 18px;cursor:pointer;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--text-muted);transition:all 0.2s ease;}
+.like-btn:hover,.like-btn.liked{background:var(--coral-bg);border-color:var(--coral);color:var(--coral);}
+.cs-nav-bottom{max-width:1140px;margin:0 auto;padding:36px 32px 56px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);}
+.cs-nav-btn{display:flex;align-items:center;gap:8px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--text-muted);cursor:pointer;transition:color 0.2s ease;}
+.cs-nav-btn:hover{color:var(--violet);}
+.cs-nav-btn.next{flex-direction:row-reverse;}
+.page-lab{background:var(--cream);min-height:100vh;padding-top:72px;}
+.lab-page-header{background:var(--white);padding:40px 0 32px;border-bottom:1px solid var(--border);}
+.lab-page-header-inner{max-width:1140px;margin:0 auto;padding:0 32px;}
+.lab-page-title{font-size:clamp(40px,5vw,64px);font-weight:900;letter-spacing:-0.03em;margin-bottom:12px;margin-top:16px;}
+.lab-page-title span{color:var(--coral);}
+.lab-page-subtitle{font-size:17px;color:var(--text-muted);max-width:600px;margin-bottom:28px;}
+.lab-filter-bar{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:32px;}
+.lab-page-grid{max-width:1140px;margin:0 auto;padding:48px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.lab-full-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;}
+.tbar{height:3px;}
+.bv{background:var(--violet);}.bc{background:var(--coral);}.bg{background:#2E7D32;}.bi{background:#3949AB;}.bt{background:#00796B;}.ba{background:#E65100;}.bd{background:var(--dark);}.bp{background:#7B1FA2;}.bb{background:#1565C0;}.bo{background:#F57F17;}
+.lab-full-header{padding:18px 22px 14px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.lab-full-header-left{flex:1;}
+.lab-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;}
+.lab-full-header h3{font-family:'Cabinet Grotesk',sans-serif;font-size:15px;font-weight:800;letter-spacing:-0.01em;line-height:1.25;}
+.lab-tool-badge{font-family:'DM Mono',monospace;font-size:10px;padding:4px 10px;border-radius:100px;white-space:nowrap;flex-shrink:0;text-transform:uppercase;letter-spacing:0.04em;}
+.dv{background:var(--violet-bg);color:var(--violet);}.dc{background:var(--coral-bg);color:var(--coral);}.dg{background:#E8F5E9;color:#2E7D32;}.di{background:#E8EAF6;color:#3949AB;}.dt{background:#E0F2F1;color:#00796B;}.da{background:#FFF3E0;color:#E65100;}.dd{background:var(--cream-dark);color:var(--text);}.dp{background:#F3E5F5;color:#7B1FA2;}.db{background:#E3F2FD;color:#1565C0;}.do{background:#FFFDE7;color:#F57F17;}
+.lab-full-body{padding:18px 22px 22px;flex:1;display:flex;flex-direction:column;gap:12px;}
+.lab-full-desc{font-size:12px;color:var(--text-muted);line-height:1.6;}
+.lbl{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;display:block;margin-bottom:5px;}
+.slider{width:100%;height:4px;border-radius:4px;background:var(--cream-dark);outline:none;-webkit-appearance:none;cursor:pointer;}
+.slider::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--violet);cursor:pointer;box-shadow:0 2px 6px rgba(107,63,160,0.35);}
+.srow{display:flex;flex-direction:column;gap:6px;}
+.stop{display:flex;justify-content:space-between;align-items:center;}
+.sval{font-family:'Cabinet Grotesk',sans-serif;font-size:15px;font-weight:800;color:var(--violet);}
+.inp{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:'Satoshi',sans-serif;font-size:14px;background:var(--cream);color:var(--text);outline:none;transition:border-color 0.2s;}
+.inp:focus{border-color:var(--violet);background:var(--white);}
+.sel{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:'Satoshi',sans-serif;font-size:14px;background:var(--cream);color:var(--text);outline:none;cursor:pointer;-webkit-appearance:none;transition:border-color 0.2s;}
+.sel:focus{border-color:var(--violet);}
+.tbtn{width:100%;padding:10px 16px;background:var(--violet);color:var(--white);border:none;border-radius:8px;font-family:'Cabinet Grotesk',sans-serif;font-weight:700;font-size:14px;cursor:pointer;transition:all 0.2s;}
+.tbtn:hover{background:var(--violet-dark);transform:translateY(-1px);}
+.result{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:12px 14px;display:none;}
+.result.show{display:block;}
+.result.rv{background:var(--violet-bg);border-color:rgba(107,63,160,0.2);}
+.result.rc{background:var(--coral-bg);border-color:rgba(232,99,74,0.2);}
+.rbig{font-family:'Cabinet Grotesk',sans-serif;font-size:28px;font-weight:900;color:var(--violet);line-height:1;margin-bottom:4px;}
+.rbig.c{color:var(--coral);}.rbig.g{color:#2E7D32;}
+.rlbl{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;}
+.rtxt{font-size:12px;color:var(--text-muted);line-height:1.6;margin-top:8px;}
+.rtxt strong{color:var(--text);}
+.ret-bars{display:flex;align-items:flex-end;gap:4px;height:60px;}
+.ret-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;height:100%;justify-content:flex-end;}
+.ret-bar{width:100%;border-radius:3px 3px 0 0;transition:height 0.4s ease;min-height:3px;}
+.ret-lbl{font-family:'DM Mono',monospace;font-size:8px;color:var(--text-muted);text-transform:uppercase;}
+.ret-inputs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.rig{display:flex;flex-direction:column;gap:4px;}
+.rinp{width:100%;padding:7px 4px;border:1.5px solid var(--border);border-radius:8px;font-family:'Cabinet Grotesk',sans-serif;font-size:14px;font-weight:700;text-align:center;background:var(--cream);color:var(--text);outline:none;transition:border-color 0.2s;}
+.rinp:focus{border-color:var(--violet);}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.cohort-title{font-family:'DM Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
+.cta-c{color:var(--violet);}.ctb{color:var(--coral);}
+.cbars{display:flex;gap:4px;align-items:flex-end;height:48px;}
+.cbar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;height:100%;justify-content:flex-end;}
+.cbar{width:100%;border-radius:3px 3px 0 0;transition:height 0.4s;}
+.cbar-lbl{font-family:'DM Mono',monospace;font-size:7px;color:var(--text-muted);}
+.funnel{display:flex;flex-direction:column;gap:7px;}
+.fstep{display:flex;align-items:center;gap:8px;}
+.flbl{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;width:76px;flex-shrink:0;line-height:1.3;}
+.finp{width:48px;padding:6px 4px;border:1.5px solid var(--border);border-radius:6px;font-family:'Cabinet Grotesk',sans-serif;font-size:13px;font-weight:700;text-align:center;background:var(--cream);color:var(--text);outline:none;flex-shrink:0;}
+.finp:focus{border-color:var(--violet);}
+.ftrack{flex:1;height:8px;background:var(--cream-dark);border-radius:4px;overflow:hidden;}
+.ffill{height:100%;border-radius:4px;background:var(--violet);transition:width 0.4s ease;}
+.checklist{display:flex;flex-direction:column;gap:7px;}
+.ci{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:8px;border:1.5px solid var(--border);cursor:pointer;transition:all 0.2s;background:var(--cream);}
+.ci:hover{border-color:var(--violet);}
+.ci.on{background:var(--violet-bg);border-color:rgba(107,63,160,0.3);}
+.cbox{width:15px;height:15px;border-radius:4px;border:2px solid var(--border-strong);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+.ci.on .cbox{background:var(--violet);border-color:var(--violet);}
+.ci.on .cbox::after{content:'';width:7px;height:7px;background:var(--white);clip-path:polygon(14% 44%,0 65%,50% 100%,100% 16%,80% 0%,43% 62%);}
+.ctxt{font-size:12px;color:var(--text-muted);line-height:1.4;}
+.ci.on .ctxt{color:var(--violet);}
+.pbar{height:5px;background:var(--cream-dark);border-radius:3px;overflow:hidden;}
+.pfill{height:100%;border-radius:3px;background:var(--violet);transition:width 0.4s ease;}
+.okr-checks{display:flex;flex-direction:column;gap:8px;margin-top:2px;}
+.okr-item{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--text-muted);line-height:1.4;}
+.odot{width:15px;height:15px;border-radius:50%;border:2px solid var(--border-strong);flex-shrink:0;margin-top:1px;transition:all 0.3s;}
+.odot.pass{background:#2E7D32;border-color:#2E7D32;}
+.odot.fail{background:var(--coral);border-color:var(--coral);}
+.ns-tree{display:flex;flex-direction:column;gap:6px;margin-top:6px;}
+.nsi{padding:8px 10px;border-radius:8px;font-size:12px;line-height:1.4;}
+.nsi.primary{background:var(--violet-bg);border:1px solid rgba(107,63,160,0.2);color:var(--violet);font-weight:700;}
+.nsi.sup{background:var(--cream);border:1px solid var(--border);color:var(--text-muted);}
+.npre{font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;opacity:0.6;margin-right:5px;}
+.ranked-list{display:flex;flex-direction:column;gap:8px;}
+.ranked-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;background:var(--cream);border:1px solid var(--border);}
+.rnum{font-family:'Cabinet Grotesk',sans-serif;font-size:18px;font-weight:900;color:var(--violet);min-width:24px;}
+.rinfo{flex:1;}
+.rname{font-size:13px;font-weight:600;color:var(--text);}
+.rmeta{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);}
+.rbar-wrap{width:56px;}
+.rtrack{height:5px;background:var(--cream-dark);border-radius:3px;overflow:hidden;}
+.rbar{height:100%;border-radius:3px;background:var(--violet);transition:width 0.4s;}
+.pflags{display:flex;flex-direction:column;gap:6px;margin-top:4px;}
+.pflag{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:8px;font-size:12px;line-height:1.4;border:1px solid var(--border);}
+.pflag.warn{background:#FFF3E0;border-color:#FFB74D;color:#E65100;}
+.pflag.ok{background:#E8F5E9;border-color:#A5D6A7;color:#2E7D32;}
+.pflag.info{background:var(--cream);color:var(--text-muted);}
+.pfdot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+.pfdot.warn{background:#E65100;}.pfdot.ok{background:#2E7D32;}.pfdot.info{background:var(--text-muted);}
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-card{display:none;}
+  .features-grid{grid-template-columns:repeat(2,1fr);}
+  .projects-grid{grid-template-columns:repeat(2,1fr);}
+  .projects-all-grid{grid-template-columns:repeat(2,1fr);}
+  .about-grid{grid-template-columns:1fr 1fr;}
+  .thinking-grid{grid-template-columns:repeat(2,1fr);}
+  .lab-grid{grid-template-columns:1fr;}
+  .lab-page-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .edu-grid{grid-template-columns:1fr 1fr;}
+  .resume-skills-grid{grid-template-columns:repeat(3,1fr);}
+  .cs-body{grid-template-columns:1fr;}
+  .cs-sidebar{position:static;}
+}
+@media(max-width:680px){
+  .container{padding:0 20px;}
+  .hamburger{display:flex;}
+  .nav-links{display:none;}
+  .hero-inner{padding:48px 20px;}
+  .features-grid{grid-template-columns:1fr;}
+  .projects-grid{grid-template-columns:1fr;}
+  .projects-all-grid{grid-template-columns:1fr;padding:28px 20px;}
+  .lab-page-grid{grid-template-columns:1fr;padding:28px 20px;}
+  .about-grid{grid-template-columns:1fr;}
+  .thinking-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .edu-grid{grid-template-columns:1fr;}
+  .projects-header{flex-direction:column;gap:16px;align-items:flex-start;}
+  .footer-inner{flex-direction:column;gap:12px;text-align:center;}
+  .resume-skills-grid{grid-template-columns:repeat(2,1fr);}
+  .cs-body{padding:28px 20px;}
+  .cs-nav-bottom{padding:28px 20px;flex-direction:column;gap:16px;}
+}
+</style>
+</head>
+<body>
+
+<nav id="main-nav">
+<div class="nav-inner">
+  <a class="nav-logo" onclick="goHome()">ST<span>.</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a id="nav-about" onclick="navTo('about')">About</a></li>
+    <li><a id="nav-projects" onclick="navTo('projects')">Projects</a></li>
+    <li><a id="nav-thinking" onclick="navTo('thinking')">Thinking</a></li>
+    <li><a id="nav-lab" onclick="navTo('lab')">Lab</a></li>
+    <li><a id="nav-contact" onclick="navTo('contact')" class="nav-cta">Get in touch</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a onclick="navTo('about');closeMobile()">About</a>
+  <a onclick="navTo('projects');closeMobile()">Projects</a>
+  <a onclick="navTo('thinking');closeMobile()">Thinking</a>
+  <a onclick="navTo('lab');closeMobile()">Lab</a>
+  <a onclick="navTo('contact');closeMobile()" class="mobile-cta">Get in touch</a>
+</div>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+<section id="hero">
+<div class="hero-bg-shapes"><div class="hero-shape-1"></div><div class="hero-shape-2"></div></div>
+<div class="hero-inner">
+  <div>
+    <div class="hero-badges">
+      <span class="badge badge-violet">Platform &amp; API Products</span>
+      <span class="badge badge-coral">AI/ML Systems</span>
+      <span class="badge badge-dark">Consumer Products · 0→1</span>
+      <span class="badge badge-dark">Experience · 8 yrs</span>
+    </div>
+    <h1 class="hero-title"><span style="color:var(--text)">Shivangi</span><br><span class="line-violet">Tripathi</span></h1>
+    <p class="hero-desc">I build products at the intersection of <strong>AI infrastructure and consumer experience</strong>, from prompt pipelines and B2B APIs to the user flows that make people stay.<br><br>At VoyceMe, I took <strong>Fableverse from zero to 150K+ users</strong> in ~3 months while shipping the Scene Engine API for external platforms. At Quso.ai, I helped scale a creator SaaS to <strong>$2M+ ARR</strong> owning roadmap, AI features, monetisation, and lifecycle.</p>
+    <div class="hero-actions">
+      <button onclick="navTo('projects')" class="btn-primary">See my work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      <button onclick="navTo('contact')" class="btn-secondary">Let's talk</button>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="hero-photo-wrap"><img src="https://i.ibb.co/placeholder" alt="Shivangi Tripathi" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="hero-photo-placeholder" style="display:none"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span>Your photo here</span></div></div>
+    <div class="hero-stat-chip chip-1"><div class="stat-num">150K+</div><div class="stat-label">Users scaled</div></div>
+    <div class="hero-stat-chip chip-2"><div class="stat-num">$2M+</div><div class="stat-label">ARR contributed</div></div>
+  </div>
+</div>
+</section>
+
+<div class="marquee-section">
+<div class="marquee-track">
+  <span class="marquee-item">Platform Product Design <span class="marquee-dot"></span></span>
+  <span class="marquee-item">B2B API Development <span class="marquee-dot"></span></span>
+  <span class="marquee-item">AI/ML Systems <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Consumer Products 0→1 <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Prompt Engineering Infrastructure <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Model Evaluation <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Product-Led Growth <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Activation &amp; Retention <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Pricing Strategy <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Cross-functional Leadership <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Platform Product Design <span class="marquee-dot"></span></span>
+  <span class="marquee-item">B2B API Development <span class="marquee-dot"></span></span>
+  <span class="marquee-item">AI/ML Systems <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Consumer Products 0→1 <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Prompt Engineering <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Model Evaluation <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Product-Led Growth <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Activation &amp; Retention <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Pricing Strategy <span class="marquee-dot"></span></span>
+  <span class="marquee-item">Cross-functional Leadership <span class="marquee-dot"></span></span>
+</div>
+</div>
+
+<section class="features-section">
+<div class="container">
+  <div class="features-grid">
+    <div class="feature-card fade-up"><div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>AI Platform Products</h3><p>From training pipelines to prompt intelligence systems to generation APIs, I've owned the full AI infrastructure layer, and the consumer experience built on top of it.</p></div>
+    <div class="feature-card fade-up"><div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Consumer Products · 0→1</h3><p>Scaled Fableverse to 150K+ users and Quso.ai to $2M ARR by designing activation loops, behavioural onboarding, and retention mechanics that actually form habits.</p></div>
+    <div class="feature-card fade-up"><div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div><h3>Platform &amp; API Design</h3><p>Built and defined the SEE API, VoyceMe's B2B image generation platform, including request architecture, latency thresholds, client dashboards, and partner onboarding workflows.</p></div>
+    <div class="feature-card fade-up"><div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><h3>Operator Mindset</h3><p>I think in systems. Whether it's a model evaluation harness or a pricing experiment, I define success upfront, instrument everything, and ship to learn, not to announce.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="about" class="about-section">
+<div class="container">
+  <div class="fade-up">
+    <span class="section-label">Who I am</span>
+    <h2 class="section-title">About <span class="accent">Shivangi</span></h2>
+    <p style="max-width:680px;color:var(--text-muted);font-size:17px;line-height:1.75;margin-top:8px;">I'm a Product Manager who's always owned more than the roadmap. In every startup I've worked at, the line between PM and PMM didn't really exist — so I've shipped products, defined their positioning, run their GTM, built their lifecycle, and tracked their retention. All of it.<br><br>My edge is holding both ends at once: the architecture and the experience, the API contract and the user motivation, the data signal and the human reason behind it.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-card fade-up">
+      <div class="about-card-icon icon-violet"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      <h3>Career &amp; Scope</h3>
+      <ul>
+        <li><strong>PM, AI Platforms &amp; APIs @ VoyceMe</strong> Mid 2024–Present. Fableverse 0→150K+ users; Scene Engine ~1,000 images/day; SEE B2B API; internal ML tooling</li>
+        <li><strong>Global Product Manager @ Quso.ai</strong> Jun 2023–Jul 2025. $2M+ ARR; AI Writer, AI Carousel, AI Influencer; 25K+ MAU</li>
+        <li><strong>Growth Product Manager @ Tickertape</strong> Dec 2021–May 2023. 1.2M+ MAU consumer fintech; iOS launch 41K installs in 3 weeks</li>
+        <li><strong>Growth Product Manager @ DeHaat</strong> Oct 2020–Dec 2021. 100K+ rural users</li>
+        <li><strong>Product Marketing Manager @ Classplus</strong> Mar 2018–Oct 2021. 4M+ user educator SaaS</li>
+      </ul>
+      <span onclick="showPage('resume')" class="resume-link">View full resume →</span>
+    </div>
+    <div class="about-card fade-up">
+      <div class="about-card-icon icon-coral"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M19.07 19.07l-1.41-1.41M4.93 19.07l1.41-1.41M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></div>
+      <h3>My Process</h3>
+      <ul>
+        <li><strong>Watch before hypothesising</strong> Session replays, cohort drop-offs, support patterns before anything else</li>
+        <li><strong>Define success before scoping</strong> North star metric, leading indicators, instrumentation plan — all before the PRD</li>
+        <li><strong>Ship the smallest valid test first</strong> Zero-eng or one-day proxy before committing to a full feature</li>
+        <li><strong>Own the full problem</strong> Discovery, scoping, GTM, adoption tracking, post-launch iteration</li>
+        <li><strong>Retention is designed in, not bolted on</strong> Map the full usage loop before scoping anything</li>
+        <li><strong>Fluent in the AI layer</strong> Prompt pipelines, model evaluation harnesses, training data workflows</li>
+      </ul>
+    </div>
+    <div class="about-card fade-up">
+      <div class="about-card-icon icon-dark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--charcoal)" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <h3>Outside the Product</h3>
+      <ul>
+        <li><strong>Certified SCUBA diver</strong> most at peace 18 metres under</li>
+        <li><strong>Trained Bharatiya Classical singer</strong> riyaaz keeps me grounded</li>
+        <li><strong>Digital artist</strong> I make art the same way I make products: from scratch</li>
+        <li><strong>Spiritual at the core</strong> I feel divinely blessed</li>
+        <li><strong>Fiction &amp; fringe science</strong> parallel universes, quantum mechanics</li>
+        <li><strong>Dog mom</strong> to a golden retriever who steals the spotlight every time</li>
+        <li><strong>Chai over everything</strong> non-negotiable, no exceptions</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="quote-strip">
+<div class="quote-inner">
+  <p class="quote-text fade-up">"Your superpower is being able to dive unbelievably deep on a topic and think about all the angles of what can make it successful or a failure."</p>
+  <p class="quote-attribution">Dylan, CEO @ VoyceMe</p>
+</div>
+</div>
+
+<section id="projects" class="projects-home-section">
+<div class="container">
+  <div class="projects-header fade-up">
+    <div><span class="section-label">My Work</span><h2 class="section-title" style="margin-bottom:0">Featured <span class="accent">Projects</span></h2></div>
+    <button onclick="showPage('projects-page')" class="btn-secondary" style="font-size:14px;padding:10px 20px;">View all →</button>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card fade-up" onclick="showCaseStudy('fableverse')">
+      <div class="project-card-bar"></div>
+      <div class="project-card-top">
+        <div class="project-num">01 / VoyceMe</div>
+        <span class="project-company-tag tag-voyce">Consumer Product</span>
+        <h3>Building a 0 to 150K User AI Roleplay Platform by Following What Users Created, Not What We Designed</h3>
+        <p>Fableverse launched with curated story scenarios. Users had other ideas. I followed the behavioral signal — character ownership, message depth, image generation — and rebuilt the product arc around what was actually driving retention.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tags"><span class="tag-pill">Consumer Product</span><span class="tag-pill">0→1</span><span class="tag-pill">Retention</span><span class="tag-pill">UGC</span></div>
+        <div class="project-cta">View case study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+    <div class="project-card fade-up" onclick="showCaseStudy('see-api')">
+      <div class="project-card-bar"></div>
+      <div class="project-card-top">
+        <div class="project-num">02 / VoyceMe</div>
+        <span class="project-company-tag tag-voyce">B2B Platform</span>
+        <h3>Turning an Internal Image Generation Engine Into a B2B API Platform, and What External Partners Broke That We Didn't Know Was Broken</h3>
+        <p>The Scene Engine worked perfectly for Fableverse because we knew where all the edges were. I productised it for external chat platforms — and every partner integration revealed an assumption we hadn't known we were making.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tags"><span class="tag-pill">B2B Platform</span><span class="tag-pill">API Design</span><span class="tag-pill">Developer Experience</span></div>
+        <div class="project-cta">View case study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+    <div class="project-card fade-up" onclick="showCaseStudy('prompt-infra')">
+      <div class="project-card-bar"></div>
+      <div class="project-card-top">
+        <div class="project-num">03 / VoyceMe</div>
+        <span class="project-company-tag tag-voyce">AI Infrastructure</span>
+        <h3>Building the AI Infrastructure That Powered Both Consumer Storytelling and B2B Integrations, From Experiment to Production Platform</h3>
+        <p>Before the Scene Engine could power external partners, it had to become a real platform. I built the quality systems, prompt infrastructure, and training pipeline that turned an internal experiment into something accountable to paying clients.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tags"><span class="tag-pill">AI Infrastructure</span><span class="tag-pill">Prompt Engineering</span><span class="tag-pill">Model Evaluation</span></div>
+        <div class="project-cta">View case study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+    <div class="project-card fade-up" onclick="showCaseStudy('ugc-characters')">
+      <div class="project-card-bar"></div>
+      <div class="project-card-top">
+        <div class="project-num">04 / VoyceMe</div>
+        <span class="project-company-tag tag-voyce">Consumer Product</span>
+        <h3>How User-Generated Characters Became the Growth Engine and the Technical Foundation for Consistent Image Generation</h3>
+        <p>UGC wasn't the original plan. Users showed us that ownership drove retention more than anything we'd designed. The creation avatar became the seed image for generation — connecting the consumer product and the AI platform in a way we hadn't anticipated.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tags"><span class="tag-pill">UGC</span><span class="tag-pill">Retention</span><span class="tag-pill">AI Systems</span></div>
+        <div class="project-cta">View case study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+    <div class="project-card fade-up" onclick="showCaseStudy('onboarding')">
+      <div class="project-card-bar"></div>
+      <div class="project-card-top">
+        <div class="project-num">05 / Quso.ai</div>
+        <span class="project-company-tag tag-quso">AI SaaS</span>
+        <h3>Redesigning Quso.ai Onboarding Around User Intent to Lift Trial Conversion by 69%</h3>
+        <p>Trial-to-paid was stuck at 14%. Session data revealed two completely different user types being forced through the same flow. I built behaviorally-routed parallel paths — and the high-intent cohort had 83% higher ARPPU than before.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tags"><span class="tag-pill">Onboarding</span><span class="tag-pill">Behavioural Segmentation</span><span class="tag-pill">Conversion</span></div>
+        <div class="project-cta">View case study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+    <div class="project-card fade-up" onclick="showCaseStudy('ai-writer')">
+      <div class="project-card-bar"></div>
+      <div class="project-card-top">
+        <div class="project-num">06 / Quso.ai</div>
+        <span class="project-company-tag tag-quso">AI SaaS</span>
+        <h3>Solving the Blank Page Problem in AI Writer to Drive a 3x Increase in Content Output at Quso.ai</h3>
+        <p>Users were leaving the platform for 45–60 minutes to use ChatGPT and Canva. The first AI Writer flopped — blank input caused decision anxiety. A pill-based prompting system fixed the entry point and drove $17.8K MRR within 60 days.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tags"><span class="tag-pill">AI Feature</span><span class="tag-pill">Behavioral Discovery</span><span class="tag-pill">MRR Growth</span></div>
+        <div class="project-cta">View case study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="stats-strip">
+<div class="container"><div class="stats-grid">
+  <div class="stat-block fade-up"><div class="num">150<span>K+</span></div><div class="label">Users scaled on<br>Fableverse</div></div>
+  <div class="stat-block fade-up"><div class="num">$2<span>M+</span></div><div class="label">ARR contributed<br>at Quso.ai</div></div>
+  <div class="stat-block fade-up"><div class="num">69<span>%</span></div><div class="label">Trial-to-paid lift<br>via segmentation</div></div>
+  <div class="stat-block fade-up"><div class="num">8<span>yrs</span></div><div class="label">Across AI, fintech,<br>edtech &amp; creator tools</div></div>
+</div></div>
+</div>
+
+<section id="thinking" class="thinking-section">
+<div class="container">
+  <div class="fade-up"><span class="section-label">Mental models</span><h2 class="section-title">How I Actually <span class="accent">Think</span></h2></div>
+  <div class="thinking-grid">
+    <div class="thinking-card tc-1 fade-up" data-num="01"><h3>Data is a signal, not a sentence</h3><p>I pull funnels, session replays, and cohort drops before forming any hypothesis. But numbers tell you what, user context tells you why. I don't move without both.</p></div>
+    <div class="thinking-card tc-2 fade-up" data-num="02"><h3>The best features feel inevitable in retrospect</h3><p>If a feature needs a lot of explanation at launch, something went wrong upstream. I look for behavior that's already happening and remove friction around it.</p></div>
+    <div class="thinking-card tc-3 fade-up" data-num="03"><h3>Build the smallest valid test first</h3><p>Before full scoping, I look for a zero-eng or one-day proxy. If users don't respond to the proxy, they won't respond to the feature either.</p></div>
+    <div class="thinking-card tc-4 fade-up" data-num="04"><h3>Infrastructure is a product decision</h3><p>Having worked directly on prompt pipelines, model evaluation systems, and API architecture, I know that infrastructure choices are product choices. I don't outsource that thinking.</p></div>
+    <div class="thinking-card tc-5 fade-up" data-num="05"><h3>Monetisation is a UX problem</h3><p>Paywalls that feel punishing kill retention. The best upgrade moments feel like a natural next step. I design for the moment of felt value, not the moment of our convenience.</p></div>
+    <div class="thinking-card tc-6 fade-up" data-num="06"><h3>Retention is the real product</h3><p>Activation metrics are vanity. D1/D7/D30 retention before celebrating any launch. A feature that brings users back is worth 10 features that only acquire them.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="lab" class="lab-section">
+<div class="container">
+  <div class="fade-up">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:0;">
+      <div>
+        <span class="section-label">Interactive tools</span>
+        <h2 class="section-title" style="margin-bottom:8px;">PM <span class="accent">Lab</span></h2>
+        <p style="color:var(--text-muted);max-width:480px;font-size:16px;">Frameworks I think with. Try them.</p>
+      </div>
+      <button onclick="showPage('lab-page')" class="btn-secondary" style="font-size:14px;padding:10px 20px;flex-shrink:0;margin-bottom:4px;">Explore all tools →</button>
+    </div>
+  </div>
+  <div class="lab-grid">
+    <div class="lab-card fade-up"><div class="lab-card-header"><h3>ICE Score Calculator</h3><span class="lab-badge">Tool</span></div><div class="lab-card-body"><div class="ice-tool"><div class="ice-row"><div class="ice-label-row"><span class="ice-label">Impact</span><span class="ice-val" id="impact-val">5</span></div><input type="range" class="ice-slider" id="impact" min="1" max="10" value="5" oninput="updateICE()"></div><div class="ice-row"><div class="ice-label-row"><span class="ice-label">Confidence</span><span class="ice-val" id="confidence-val">5</span></div><input type="range" class="ice-slider" id="confidence" min="1" max="10" value="5" oninput="updateICE()"></div><div class="ice-row"><div class="ice-label-row"><span class="ice-label">Ease</span><span class="ice-val" id="ease-val">5</span></div><input type="range" class="ice-slider" id="ease" min="1" max="10" value="5" oninput="updateICE()"></div><div class="ice-result"><div class="ice-score-num" id="ice-score">5.0</div><div class="ice-score-label" id="ice-label">ICE Score — Prioritise if time allows</div></div></div></div></div>
+    <div class="lab-card fade-up"><div class="lab-card-header"><h3>PM Archetype Quiz</h3><span class="lab-badge">Quiz</span></div><div class="lab-card-body"><p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;line-height:1.5;">When a feature isn't converting, your first instinct is to...</p><div class="quiz-options"><button class="quiz-option" onclick="selectQuiz(this,'Analyst PM','You run the data first. Segment users, pull drop-off, and form a hypothesis before touching anything.')">Pull the funnel data</button><button class="quiz-option" onclick="selectQuiz(this,'Empathy-first PM','You talk to users before anything else. Numbers tell you what, but users tell you why.')">Call 5 users immediately</button><button class="quiz-option" onclick="selectQuiz(this,'Shipping PM','You ship a quick fix and measure. Speed of learning beats depth of analysis.')">A/B test a quick fix</button><button class="quiz-option" onclick="selectQuiz(this,'Systems PM','You map the whole system upstream and downstream before making any changes.')">Map the whole journey</button></div><div class="quiz-result" id="quiz-result"><div class="quiz-result-type" id="quiz-type"></div><div class="quiz-result-desc" id="quiz-desc"></div></div></div></div>
+    <div class="lab-card fade-up"><div class="lab-card-header"><h3>Retention Curve Visualiser</h3><span class="lab-badge">Tool</span></div><div class="lab-card-body"><div class="retention-tool"><div class="retention-input-row"><div class="retention-input-wrap"><label>D1</label><input type="number" class="retention-input" id="r-d1" value="60" min="0" max="100" oninput="updateRetention()"></div><div class="retention-input-wrap"><label>D7</label><input type="number" class="retention-input" id="r-d7" value="30" min="0" max="100" oninput="updateRetention()"></div><div class="retention-input-wrap"><label>D14</label><input type="number" class="retention-input" id="r-d14" value="20" min="0" max="100" oninput="updateRetention()"></div><div class="retention-input-wrap"><label>D30</label><input type="number" class="retention-input" id="r-d30" value="12" min="0" max="100" oninput="updateRetention()"></div></div><div class="retention-bars"><div class="r-bar-wrap"><div class="r-bar" id="bar-d1" style="height:60%"></div><div class="r-bar-label">D1</div></div><div class="r-bar-wrap"><div class="r-bar" id="bar-d7" style="height:30%;background:var(--violet-light)"></div><div class="r-bar-label">D7</div></div><div class="r-bar-wrap"><div class="r-bar" id="bar-d14" style="height:20%;background:var(--coral)"></div><div class="r-bar-label">D14</div></div><div class="r-bar-wrap"><div class="r-bar" id="bar-d30" style="height:12%;background:var(--coral-light)"></div><div class="r-bar-label">D30</div></div></div><div class="retention-insight" id="retention-insight">D1 to D7 drop is 50% — typical for consumer apps. Focus on the aha moment in first session.</div></div></div></div>
+  </div>
+</div>
+</section>
+
+<section id="education" class="edu-section">
+<div class="container">
+  <div class="fade-up"><span class="section-label">Education &amp; Credentials</span><h2 class="section-title">Background &amp; <span class="accent">Toolstack</span></h2></div>
+  <div class="edu-grid fade-up">
+    <div class="edu-block"><h4>Education</h4><ul><li><strong>PGDM — Marketing</strong>Apeejay School of Management · 2016–2018</li><li><strong>M.A. — Tourism &amp; Travel Management</strong>Banaras Hindu University · 2014–2016</li><li><strong>BBA</strong>University of Lucknow · 2011–2014</li></ul></div>
+    <div class="edu-block"><h4>Certifications</h4><ul><li><strong>Product Management Foundation</strong>Accredian · 2022</li><li><strong>Design System Bootcamp</strong>2024</li><li><strong>Certified Digital Marketing Master</strong>Digital Vidya · 2020</li></ul></div>
+    <div class="edu-block"><h4>Languages</h4><ul><li><strong>English</strong>Fluent</li><li><strong>Hindi</strong>Native</li></ul></div>
+  </div>
+  <div class="toolstack fade-up"><h4>Toolstack</h4><div class="tool-pills"><span class="tool-pill">Amplitude</span><span class="tool-pill">Mixpanel</span><span class="tool-pill">GA4</span><span class="tool-pill">Fullstory</span><span class="tool-pill">MoEngage</span><span class="tool-pill">Jira</span><span class="tool-pill">Figma</span><span class="tool-pill">Redash</span><span class="tool-pill">Metabase</span><span class="tool-pill">Branch</span><span class="tool-pill">UXCam</span><span class="tool-pill">CleverTap</span><span class="tool-pill">N8n</span><span class="tool-pill">Supawall</span><span class="tool-pill">Databricks</span><span class="tool-pill">Tableau</span><span class="tool-pill">GrowthBook</span></div></div>
+</div>
+</section>
+
+<section id="contact" class="contact-section">
+<div class="container"><div class="contact-inner">
+  <div class="contact-label">Let's connect</div>
+  <h2>Let's talk <span>product</span></h2>
+  <p>I'm always happy to connect with people building interesting things — whether that's a role, a collaboration, or just a good conversation about what makes something actually work.</p>
+  <div class="contact-links">
+    <a href="mailto:shivangit29@gmail.com" class="contact-link contact-link-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>shivangit29@gmail.com</a>
+    <a href="https://linkedin.com/in/shivangi-tripathi" target="_blank" class="contact-link contact-link-secondary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+    <button onclick="showPage('projects-page')" class="contact-link contact-link-secondary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>View work</button>
+  </div>
+</div></div>
+</section>
+<footer><div class="footer-inner"><div class="footer-logo">ST.</div><div class="footer-copy">© 2026 Shivangi Tripathi. Built with intention.</div><span onclick="window.scrollTo({top:0,behavior:'smooth'})" class="footer-back">Back to top ↑</span></div></footer>
+</div>
+
+<!-- PROJECTS PAGE -->
+<div id="page-projects-page" class="page page-projects">
+<div class="projects-page-header">
+  <div class="projects-page-header-inner">
+    <div class="page-header-nav">
+      <a onclick="showPage('home')" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Back to Home</a>
+      <span class="section-label" style="margin-bottom:0">My Work</span>
+    </div>
+    <h1 class="projects-page-title">All <span style="color:var(--coral)">Projects</span></h1>
+    <p class="projects-page-subtitle">Case studies across AI platforms, consumer products, B2B APIs, SaaS monetisation, fintech, and growth.</p>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterProjects('all',this)">All</button>
+      <button class="filter-btn" onclick="filterProjects('voyce',this)">VoyceMe</button>
+      <button class="filter-btn" onclick="filterProjects('quso',this)">Quso.ai</button>
+      <button class="filter-btn" onclick="filterProjects('consumer',this)">Consumer</button>
+      <button class="filter-btn" onclick="filterProjects('b2b',this)">B2B / API</button>
+      <button class="filter-btn" onclick="filterProjects('ai',this)">AI / ML</button>
+      <button class="filter-btn" onclick="filterProjects('growth',this)">Growth</button>
+      <button class="filter-btn" onclick="filterProjects('monetisation',this)">Monetisation</button>
+    </div>
+  </div>
+</div>
+<div class="projects-all-grid" id="projects-all-grid"></div>
+<footer><div class="footer-inner"><div class="footer-logo">ST.</div><div class="footer-copy">© 2026 Shivangi Tripathi</div><span onclick="showPage('home')" class="footer-back">Back to Home</span></div></footer>
+</div>
+
+<!-- RESUME PAGE -->
+<div id="page-resume" class="page page-resume">
+<div class="resume-header">
+  <div class="resume-header-inner">
+    <div class="page-header-nav"><a onclick="showPage('home');scrollToSection('about')" class="back-link back-link-light"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Back</a></div>
+    <h1>Shivangi <span>Tripathi</span></h1>
+    <p>Product Manager · Platforms, APIs &amp; Consumer Products · 0→1 Builder · 8+ years</p>
+    <div class="resume-header-actions">
+      <button class="btn-download" onclick="alert('PDF download would be triggered here')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download PDF</button>
+      <a href="mailto:shivangit29@gmail.com" class="btn-secondary" style="color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.25)">shivangit29@gmail.com</a>
+    </div>
+  </div>
+</div>
+<div class="resume-body">
+  <div class="resume-section">
+    <div class="resume-section-title">Key Skills</div>
+    <div class="resume-skills-grid">
+      <div class="resume-skill-tag">Product Strategy</div><div class="resume-skill-tag">Product Roadmap</div><div class="resume-skill-tag">Feature Prioritization</div><div class="resume-skill-tag">Scope &amp; Trade-offs</div>
+      <div class="resume-skill-tag">Experimentation &amp; A/B Testing</div><div class="resume-skill-tag">User Flows</div><div class="resume-skill-tag">AI Product Systems</div><div class="resume-skill-tag">Product-Led Growth</div>
+      <div class="resume-skill-tag">Pricing Strategy</div><div class="resume-skill-tag">Platform Product Design</div><div class="resume-skill-tag">Funnel Analysis</div><div class="resume-skill-tag">Product Analytics</div>
+      <div class="resume-skill-tag">Cross-functional Leadership</div><div class="resume-skill-tag">Product Discovery</div><div class="resume-skill-tag">API Product Development</div><div class="resume-skill-tag">AI Platform Development</div>
+    </div>
+  </div>
+  <div class="resume-section">
+    <div class="resume-section-title">Experience</div>
+    <div class="resume-job">
+      <div class="resume-job-header"><div><div class="resume-job-title">Product Manager — AI Platforms &amp; APIs</div><div class="resume-job-company">Voyce.me</div></div><div class="resume-job-period">Mid 2024 – Present</div></div>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;line-height:1.6;">Built the Fableverse AI platform from 0 → 150K+ users, leading 0→1 development of the image generation infrastructure (~1,000 images/day), internal model training and prompt intelligence systems, and APIs enabling external chat platforms to generate context-aware images.</p>
+      <div class="resume-job-section-label">Consumer Product &amp; Retention</div>
+      <ul><li>Led UX definition for homepage discovery and the in-chat user lifecycle; ~1 hour average app session time</li><li>27% of app users sending 50+ messages; average 733 messages per app user, 30% higher than web</li><li>D1 retention ~30% for 20+ message users; up to 54% in high-intent cohorts</li></ul>
+      <div class="resume-job-section-label">AI SEE Image Generation &amp; B2B API</div>
+      <ul><li>Scaled SEE to ~1,000 image generations/day with entirely organic traffic</li><li>Led product definition for SEE API; onboarded SpicyChat, Nectar, LoveScape, LoreWeaver</li><li>Designed client-facing usage dashboards and analytics instrumentation</li></ul>
+      <div class="resume-job-section-label">AI Infrastructure</div>
+      <ul><li>Built prompt management portal (YAML → CMS), semantic similarity scoring across 363 prompts</li><li>Built model evaluation test harness and bad generation classification taxonomy</li><li>Drove data curation platform and browser plugin for training pipeline</li></ul>
+    </div>
+    <div class="resume-job">
+      <div class="resume-job-header"><div><div class="resume-job-title">Global Product Manager</div><div class="resume-job-company">Quso.ai (formerly vidyo.ai)</div></div><div class="resume-job-period">Jun 2023 – Jul 2025</div></div>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;line-height:1.6;">Led product roadmap, monetization, and activation initiatives across web and mobile, contributing to $2M+ ARR.</p>
+      <div class="resume-job-section-label">Onboarding &amp; Retention</div>
+      <ul><li>Behavioral segmentation into Explorers and Early Birds; trial-to-paid conversion from 14% → 23% (+69%)</li><li>Churn reduced from 17% → ~8%; Week 2 retention improved 31%</li><li>Early Bird cohort: 83% higher ARPPU; Workspace Collaboration drove 2.6x weekly return sessions</li></ul>
+      <div class="resume-job-section-label">AI Feature Development</div>
+      <ul><li>AI Writer pill-based system: usage 9% → 29% of active users in 14 days; content output 3x per session; $17.8K MRR in 60 days</li><li>Led AI Carousel, AI Influencer; reverse free trial lifted upgrade conversion 38%</li></ul>
+      <div class="resume-job-section-label">Pricing &amp; Monetisation</div>
+      <ul><li>Rebuilt pricing architecture; 78% of paying users on annual subscriptions</li><li>Mobile Plus Plan: $3.7K MRR in month one; ARPU improved 18% via feature add-ons</li><li>Regional PPP pricing opened LATAM market</li></ul>
+    </div>
+    <div class="resume-job">
+      <div class="resume-job-header"><div><div class="resume-job-title">Growth Product Manager</div><div class="resume-job-company">Tickertape (Smallcase)</div></div><div class="resume-job-period">Dec 2021 – May 2023</div></div>
+      <ul style="margin-top:16px"><li>Shipped iOS onboarding and migration flow; 41K installs in 3 weeks vs 16K target</li><li>79% of active web users migrated within 14 days; 31% improvement in premium upgrade rate</li><li>Click-to-conversion improved from 1.1% → 2.3%</li></ul>
+    </div>
+    <div class="resume-job">
+      <div class="resume-job-header"><div><div class="resume-job-title">Growth Product Manager</div><div class="resume-job-company">DeHaat</div></div><div class="resume-job-period">Oct 2020 – Dec 2021</div></div>
+      <ul style="margin-top:16px"><li>Owned onboarding and activation flows for farmer-facing and AI advisory features</li><li>First-week feature usage improved 21%; early churn reduced 12%</li></ul>
+    </div>
+    <div class="resume-job">
+      <div class="resume-job-header"><div><div class="resume-job-title">Product Marketing Manager</div><div class="resume-job-company">Classplus</div></div><div class="resume-job-period">Mar 2018 – Oct 2021</div></div>
+      <ul style="margin-top:16px"><li>Trial signups increased 53%; DAU grew from 25% to 55% in 6 months</li><li>Led GTM for 6 major features, improving adoption by 78%</li></ul>
+    </div>
+  </div>
+  <div class="resume-section">
+    <div class="resume-section-title">Education</div>
+    <div class="resume-job"><div class="resume-job-header"><div><div class="resume-job-title">PGDM — Marketing</div><div class="resume-job-company">Apeejay School of Management, Delhi</div></div><div class="resume-job-period">2016–2018</div></div></div>
+    <div class="resume-job" style="margin-top:12px"><div class="resume-job-header"><div><div class="resume-job-title">M.A. — Tourism &amp; Travel Management</div><div class="resume-job-company">Banaras Hindu University</div></div><div class="resume-job-period">2014–2016</div></div></div>
+  </div>
+  <div class="resume-section">
+    <div class="resume-section-title">Tools</div>
+    <div class="tool-pills"><span class="tool-pill">Amplitude</span><span class="tool-pill">Mixpanel</span><span class="tool-pill">GA4</span><span class="tool-pill">Clarity</span><span class="tool-pill">Jira</span><span class="tool-pill">Branch</span><span class="tool-pill">UXCam</span><span class="tool-pill">Redash</span><span class="tool-pill">Metabase</span><span class="tool-pill">Fullstory</span><span class="tool-pill">MoEngage</span><span class="tool-pill">CleverTap</span><span class="tool-pill">Figma</span><span class="tool-pill">N8n</span><span class="tool-pill">Heap</span><span class="tool-pill">Supawall</span><span class="tool-pill">GrowthBook</span><span class="tool-pill">Tableau</span><span class="tool-pill">Databricks</span></div>
+  </div>
+</div>
+<footer><div class="footer-inner"><div class="footer-logo">ST.</div><div class="footer-copy">© 2026 Shivangi Tripathi</div><span onclick="showPage('home')" class="footer-back">Back to Home</span></div></footer>
+</div>
+
+<!-- CASE STUDY PAGE -->
+<div id="page-case-study" class="page page-case-study">
+<div id="cs-content-area"></div>
+<footer><div class="footer-inner"><div class="footer-logo">ST.</div><div class="footer-copy">© 2026 Shivangi Tripathi</div><span onclick="showPage('projects-page')" class="footer-back">All Projects</span></div></footer>
+</div>
+
+<!-- LAB PAGE -->
+<div id="page-lab-page" class="page page-lab">
+<div class="lab-page-header">
+  <div class="lab-page-header-inner">
+    <div class="page-header-nav">
+      <a onclick="showPage('home')" class="back-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Back to Home</a>
+      <span class="section-label" style="margin-bottom:0">PM Tools</span>
+    </div>
+    <h1 class="lab-page-title">The <span>Lab</span></h1>
+    <p class="lab-page-subtitle">Frameworks I think with. All run in the browser, no data saved.</p>
+    <div class="lab-filter-bar">
+      <button class="filter-btn active" onclick="filterLab('all',this)">All</button>
+      <button class="filter-btn" onclick="filterLab('prioritisation',this)">Prioritisation</button>
+      <button class="filter-btn" onclick="filterLab('retention',this)">Retention</button>
+      <button class="filter-btn" onclick="filterLab('growth',this)">Growth</button>
+      <button class="filter-btn" onclick="filterLab('strategy',this)">Strategy</button>
+      <button class="filter-btn" onclick="filterLab('scoping',this)">Scoping</button>
+    </div>
+  </div>
+</div>
+<div class="lab-page-grid" id="lab-page-grid"></div>
+<footer><div class="footer-inner"><div class="footer-logo">ST.</div><div class="footer-copy">© 2026 Shivangi Tripathi</div><span onclick="showPage('home')" class="footer-back">Back to Home</span></div></footer>
+</div>
+
+<script>
+/* NAV */
+function goHome(){showPage('home');window.scrollTo({top:0,behavior:'smooth'});}
+function navTo(section){
+  const sectionMap={about:'about',projects:'projects',thinking:'thinking',lab:'lab',contact:'contact'};
+  const targetId=sectionMap[section]||section;
+  const wasOnHome=document.getElementById('page-home').classList.contains('active');
+  if(wasOnHome){const el=document.getElementById(targetId);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+  else{showPage('home');setTimeout(()=>{const el=document.getElementById(targetId);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},80);}
+}
+function updateNavOnScroll(){
+  const page=document.getElementById('page-home');if(!page.classList.contains('active'))return;
+  const sections=[{id:'about',navId:'nav-about'},{id:'projects',navId:'nav-projects'},{id:'thinking',navId:'nav-thinking'},{id:'lab',navId:'nav-lab'},{id:'contact',navId:'nav-contact'}];
+  let current='';
+  sections.forEach(s=>{const el=document.getElementById(s.id);if(el){const rect=el.getBoundingClientRect();if(rect.top<=120)current=s.navId;}});
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  if(current){const el=document.getElementById(current);if(el)el.classList.add('active');}
+}
+window.addEventListener('scroll',updateNavOnScroll,{passive:true});
+
+function showPage(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el=document.getElementById('page-'+page);
+  if(el){el.classList.add('active');window.scrollTo(0,0);}
+  if(page==='projects-page'){renderAllProjects('all');}
+  else if(page==='lab-page'){renderLabTools('all');}
+}
+function scrollToSection(id){showPage('home');setTimeout(()=>{const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});},80);}
+
+const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobile-menu');
+if(hamburger)hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');});
+function closeMobile(){if(hamburger)hamburger.classList.remove('open');if(mobileMenu)mobileMenu.classList.remove('open');}
+
+/* PROJECTS DATA */
+const allProjects=[
+  {id:'fableverse',num:'01',company:'VoyceMe',companyTag:'voyce',label:'Consumer Product',type:['voyce','consumer','ai'],cardTitle:'0 to 150K Users by Following What Users Built, Not What We Designed',title:'Building a 0 to 150K User AI Roleplay Platform by Following What Users Created, Not What We Designed',desc:'Fableverse launched with curated story scenarios. Users had other ideas. I followed the behavioral signal — character ownership, message depth, image generation — and rebuilt the product arc around what was actually driving retention.',tags:['Consumer Product','0→1','Retention','UGC'],likes:87},
+  {id:'see-api',num:'02',company:'VoyceMe',companyTag:'voyce',label:'B2B Platform',type:['voyce','b2b','ai'],cardTitle:'Turning an Internal AI Engine Into a B2B API — and What Partners Broke',title:'Turning an Internal Image Generation Engine Into a B2B API Platform, and What External Partners Broke That We Didn\'t Know Was Broken',desc:'The Scene Engine worked perfectly for Fableverse because we knew where all the edges were. I productised it for external chat platforms — and every partner integration revealed an assumption we hadn\'t known we were making.',tags:['B2B Platform','API Design','Developer Experience'],likes:63},
+  {id:'prompt-infra',num:'03',company:'VoyceMe',companyTag:'voyce',label:'AI Infrastructure',type:['voyce','ai'],cardTitle:'Building the AI Infrastructure That Powered Consumer and B2B at the Same Time',title:'Building the AI Infrastructure That Powered Both Consumer Storytelling and B2B Integrations, From Experiment to Production Platform',desc:'Before the Scene Engine could power external partners, it had to become a real platform. I built the quality systems, prompt infrastructure, and training pipeline that turned an internal experiment into something accountable to paying clients.',tags:['AI Infrastructure','Prompt Engineering','Model Evaluation'],likes:74},
+  {id:'ugc-characters',num:'04',company:'VoyceMe',companyTag:'voyce',label:'Consumer Product',type:['voyce','consumer','ai'],cardTitle:'How UGC Characters Became Both the Growth Engine and the AI Foundation',title:'How User-Generated Characters Became the Growth Engine and the Technical Foundation for Consistent Image Generation',desc:'UGC wasn\'t the original plan. Users showed us that ownership drove retention more than anything we\'d designed. The creation avatar became the seed image for generation — connecting the consumer product and the AI platform in a way we hadn\'t anticipated.',tags:['UGC','Retention','AI Systems','0→1'],likes:68},
+  {id:'onboarding',num:'05',company:'Quso.ai',companyTag:'quso',label:'AI SaaS',type:['quso','growth','consumer'],cardTitle:'Two User Types, One Broken Onboarding — 69% Conversion Lift',title:'Redesigning Quso.ai Onboarding Around User Intent to Lift Trial Conversion by 69%',desc:'Trial-to-paid was stuck at 14%. Session data revealed two completely different user types being forced through the same flow. I built behaviorally-routed parallel paths — and the high-intent cohort had 83% higher ARPPU than before.',tags:['Onboarding','Behavioural Segmentation','Conversion'],likes:104},
+  {id:'ai-writer',num:'06',company:'Quso.ai',companyTag:'quso',label:'AI Feature',type:['quso','ai','growth'],cardTitle:'The Blank Page Problem That Was Killing AI Writer Adoption',title:'Solving the Blank Page Problem in AI Writer to Drive a 3x Increase in Content Output at Quso.ai',desc:'Users were leaving the platform for 45–60 minutes to use ChatGPT and Canva. The first AI Writer flopped because of blank-input anxiety. A pill-based prompting system fixed the entry point and drove $17.8K MRR within 60 days.',tags:['AI Feature','Behavioral Discovery','MRR Growth'],likes:98},
+  {id:'reverse-trial',num:'07',company:'Quso.ai',companyTag:'quso',label:'Monetisation',type:['quso','growth','monetisation'],cardTitle:'Flipping the Paywall to Surface Premium Value Earlier — 38% Lift',title:'Redesigning Quso.ai\'s Trial Model to Surface Premium Value Earlier and Lift Upgrade Conversion by 38%',desc:'Fewer than 8% of free users were ever reaching premium features — not because they weren\'t interested, but because the paywall was in the way before they had any reason to believe it was worth paying for.',tags:['Monetisation','Reverse Trial','PLG'],likes:91},
+  {id:'pricing',num:'08',company:'Quso.ai',companyTag:'quso',label:'Pricing Strategy',type:['quso','growth','monetisation'],cardTitle:'From Three Undifferentiated Plans to a Hero-Led Pricing System',title:'Rebuilding Quso.ai\'s Pricing Architecture from Three Undifferentiated Plans to a Hero-Led Monetization System',desc:'Our three plans had no clear story connecting them. I rebuilt the architecture around a hero plan, introduced modular add-ons, PPP-adjusted regional pricing, and a mobile-specific plan — 78% of paying users ended up on annual subscriptions.',tags:['Pricing Strategy','Monetisation','ARPU Growth'],likes:79},
+];
+
+/* CASE STUDIES */
+const caseStudies={
+  'fableverse':{
+    company:'VoyceMe',companyTag:'voyce',
+    title:'Building a 0 to 150K User AI Roleplay Platform by Following What Users Created, Not What We Designed',
+    subtitle:'How following behavioral signals — not the original product vision — shaped everything from onboarding to image generation and drove 150K+ users in ~3 months.',
+    skills:['Consumer Product','0→1','Retention','UGC','Gamification','Onboarding','Image Generation'],
+    metrics:[{num:'150K+',label:'Users in ~3 months'},{num:'~1hr',label:'Avg app session time'},{num:'63%',label:'UGC participation rate'},{num:'54%',label:'D1 retention, high-intent cohorts'}],
+    sections:[
+      {num:'01',title:'The Setup',body:'When I joined VoyceMe, Fableverse had a clear vision: build a platform where users could step inside a story and roleplay through chat. The hypothesis was that narrative-driven scenarios would drive engagement — users would enter a world, interact with pre-built characters, and keep coming back for the story.<br><br>It was a reasonable bet. And early on, it worked. But as we watched how users actually moved through the platform, something more interesting was happening underneath the surface.'},
+      {num:'02',title:'The Decision That Changed Everything',body:'The original model put the story at the center. What we didn\'t anticipate was that users didn\'t just want to be inside someone else\'s story. They wanted to create their own characters and talk to them.<br><br>That shift — from story-first to character-first — meant rethinking the entire interaction model. Instead of structured narrative entry points, the platform needed to support open-ended, user-driven roleplay where the character was the product. We introduced UGC character creation. Almost immediately, character chats became the dominant interaction layer.'},
+      {num:'03',title:'My Role & What I Owned',body:'As the sole PM, I owned everything: homepage discovery architecture, narrative onboarding, the in-chat UX for AI-generated scenes, UGC character creation, testing, and publishing, gamification mechanics (Battle Royale system), notification infrastructure, and the Vox token economy.<br><br>I also defined the event taxonomy and analytics instrumentation across the entire platform.'},
+      {num:'04',title:'The Signal That Restructured the Roadmap',body:'Early on I identified that the metric that actually predicted retention wasn\'t session count or installs. It was message depth. Users who sent 20+ messages in a session retained dramatically better than everyone else.<br><br>That single insight restructured everything we prioritized — onboarding, conversation starters, image generation triggers, gamification — all oriented around one question: does this get users deeper into the conversation faster?'},
+      {num:'05',title:'The Image Generation Push',body:'About 1.5 months after UGC launched, I pushed for something not on the official roadmap. Leadership kept postponing image generation with vague "it\'s not perfect yet" feedback. Nobody could define what perfect actually meant — it was an anxiety, not a standard.<br><br>I got on a call directly with the AI engineer and understood the real constraint: character consistency, not quality. We already had a solution hiding in plain sight — the UGC avatar generated during character creation. If we used it as a seed image for in-chat generation, consistency was solved.<br><br>Instead of arguing internally about quality, I ran user interviews. Users didn\'t describe pixel-perfect standards. They described seeing their story come alive. I went back to leadership with user sentiment instead of internal opinion, and we got the green light.'},
+      {num:'06',title:'The Results',body:'150K+ users in ~3 months with entirely organic traffic. 27% of app users sent 50+ messages. Average 733 messages per app user — ~30% higher than web. D1 retention reached ~30% for 20+ message users and up to 54% in high-intent cohorts. ~1 hour average app session time. UGC participation: 63%. Character creation penetration: 44%. The Scene Engine scaled to ~1,000 image generations per day.'},
+      {num:'07',title:'What I Learned',body:'The lesson that stayed with me: retention isn\'t about features, it\'s about designing the moment where a user realises they\'re invested. For Fableverse, that moment was when a generated scene appeared in the chat that matched exactly what was happening in the story. That\'s when users stopped being users and started being storytellers.<br><br>And: "It\'s not perfect" is not a product standard. It\'s an anxiety. The way to resolve it isn\'t to argue about quality internally — it\'s to go find out what users actually think.'}
+    ],prev:null,next:'see-api'
+  },
+  'see-api':{
+    company:'VoyceMe',companyTag:'voyce',
+    title:'Turning an Internal Image Generation Engine Into a B2B API Platform, and What External Partners Broke That We Didn\'t Know Was Broken',
+    subtitle:'How I productised VoyceMe\'s internal Scene Engine for external chat platforms — and how every partner integration revealed gaps we\'d been compensating for with institutional knowledge.',
+    skills:['B2B Platform','API Design','Developer Experience','Platform Product','Quality Systems'],
+    metrics:[{num:'~1K',label:'Images/day via API'},{num:'4+',label:'External partners integrated'},{num:'<3s',label:'Target latency threshold'},{num:'B2B',label:'New revenue stream opened'}],
+    sections:[
+      {num:'01',title:'The Setup',body:'When I was working on Fableverse, the growth curve was flattening and investors wanted to see more. I looked at the situation and thought about what could actually move the needle. B2C retention has a natural ceiling. B2B retention is structurally different — once a platform integrates your API into their live product, the switching cost is real.<br><br>I proposed the B2B direction to my CEO, and we went out to find our first partners together. The targets: SpicyChat, Nectar, LoveScape, LoreWeaver. They all had the same problem — they had the chat and the characters, but no way to generate contextually consistent images inside those conversations.'},
+      {num:'02',title:'What Made Our System Different',body:'Most image generation APIs were prompt-in, image-out. No awareness of conversation history. No character consistency across scenes.<br><br>What we had was narrative intelligence. Using the character\'s UGC avatar as a seed image for image-to-image generation, combined with a persistence system that tracked character attributes across the conversation — this is what made the same character look like themselves across dozens of scenes. Partners could not replicate this by plugging in any existing service.'},
+      {num:'03',title:'What Partners Broke',body:'When you build for yourself, you can compensate for gaps with knowledge. You know where the edges are. When you expose the system to partners, all of that invisible compensating disappears.<br><br>The first major issue was the art style problem. Our model was trained on animanga aesthetics. Partners wanted photorealistic characters. In realistic styles, character consistency got dramatically worse — the model simply hadn\'t seen enough high-quality realistic reference images to maintain identity across generations. Solving this required building an entire training infrastructure that didn\'t yet exist.'},
+      {num:'04',title:'What I Built & Shipped',body:'<strong>API product definition:</strong> request structure, context window specs, prompt rendering pipeline, async vs real-time delivery modes, error handling and fallback UX.<br><br><strong>Client-facing dashboard:</strong> self-serve monitoring portal showing API volume, latency, success rates, and image interaction metrics so partners could diagnose most issues themselves.<br><br><strong>Demo tool:</strong> internal testing interface for partners to validate generation requests before full integration.<br><br><strong>Training infrastructure:</strong> centralised data curation platform, browser plugin for one-click training image capture with metadata tagging at point of collection, and a structured review/approval pipeline before images entered training datasets.'},
+      {num:'05',title:'The Results',body:'SEE API became VoyceMe\'s primary B2B product, enabling the internal AI infrastructure to power external storytelling platforms. Partners integrated real-time scene generation into their chat experiences without building generation infrastructure from scratch. The retention story I had pitched turned out to be exactly right — once the API became load-bearing inside partner products, switching cost was real.'},
+      {num:'06',title:'What I Learned',body:'Productizing an internal system is not primarily a technical problem. It\'s a quality problem. The test harnesses, the classification system, the training pipeline — none of this was on the original roadmap. All of it was built because partners discovered edge cases that we had been unconsciously routing around.<br><br>In that sense, the SEE API partners didn\'t just consume our platform. They made it significantly better.'}
+    ],prev:'fableverse',next:'prompt-infra'
+  },
+  'prompt-infra':{
+    company:'VoyceMe',companyTag:'voyce',
+    title:'Building the AI Infrastructure That Powered Both Consumer Storytelling and B2B Integrations, From Experiment to Production Platform',
+    subtitle:'How I built the quality systems, prompt intelligence, and training pipeline that turned the Scene Engine from an internal experiment into an accountable production platform.',
+    skills:['AI Infrastructure','Prompt Engineering','Model Evaluation','Quality Systems','Training Pipeline'],
+    metrics:[{num:'363',label:'Prompts scored for similarity'},{num:'90%',label:'Similarity threshold calibrated'},{num:'10–15%→5–10%',label:'Bad generation rate target'},{num:'Daily',label:'AI performance review cadence'}],
+    sections:[
+      {num:'01',title:'The Setup',body:'The Scene Engine had the model — but prompts were managed through YAML files in the codebase, training data was scattered across shared drives and messaging threads, and there was no structured way to evaluate whether a generation was good or bad. When you have external partners running the API in production, that approach doesn\'t work. A regression that breaks character consistency for a specific prompt pattern might not be caught until a partner reports it.'},
+      {num:'02',title:'The Quality System',body:'The daily review process was genuinely operational. We reviewed specific scene IDs, adjusted confidence thresholds, and flagged prompt issues to engineers. Decisions from those calls went into tickets the same day.<br><br>But to make quality systematic, we needed structure beyond daily reviews.<br><br><strong>Bad generation classification:</strong> taxonomy for failure types — anatomy errors, character consistency issues, pose inaccuracies, background distortions, scene composition problems. This turned subjective observations into structured data analyzable across volume.<br><br><strong>Test harness:</strong> standardized benchmark suite covering the range of generation contexts the platform needed to handle. Every model version ran against the same scenarios before deployment. Side-by-side comparison made regressions immediately visible.'},
+      {num:'03',title:'The Prompt Discovery',body:'We built a prompt similarity scoring system and ran it against our generation logs. Out of 363 curated prompts, only ~20% were being used frequently. The LLM was regularly generating its own prompts dynamically rather than selecting from the curated library — reinventing prompts we had already carefully engineered, introducing inconsistency every time.<br><br>We replaced the YAML system with a prompt management portal: create, review, approve, and deploy prompts without touching code. We built a generalization pipeline converting overly specific prompts into reusable templates, and a rewriting system to standardize structures across the library. Prompt usage became measurable. Underperforming prompts could be identified and replaced.'},
+      {num:'04',title:'The Training Infrastructure',body:'The art style problem forced us to build training infrastructure that didn\'t yet exist. Our model had been trained on animanga. Partners needed realistic styles. In realistic styles, consistency got dramatically worse.<br><br>The data curation platform gave us a centralised pipeline: images collected through the browser plugin with metadata tagged at capture, processed through editing tools built into the platform, reviewed and approved before entering training datasets. Every image was tagged by visual style, character type, pose category, environment type, and scene composition. When we needed to train for a specific capability, we could query the dataset rather than manually reviewing everything.'},
+      {num:'05',title:'The SpicyChat Moment',body:'The test that crystallised everything: SpicyChat — 1.4–1.5M daily users, $30M annual revenue — entered the picture as a potential partner. The evaluation was framed as final. We had known gaps: user persona support, male/female model consistency. The choice was between waiting until those gaps were closed or stress-testing our prompts against known weaknesses under deadline pressure.<br><br>We chose to ship. We went into the evaluation knowing exactly where we stood because the quality systems gave us that visibility. It was not a guess. It worked.'},
+      {num:'06',title:'What I Learned',body:'Infrastructure is a product decision. Every choice made at the pipeline level — how prompts are structured, how similarity is measured, what failure categories exist — shapes the quality of what users experience.<br><br>When you can measure your failure rate, classify your failure types, and benchmark your model against standardized scenarios, you can make a judgment about whether you\'re good enough for a specific context. When you can\'t measure any of that, you\'re just guessing. We stopped guessing around the time Lore Weaver signed.'}
+    ],prev:'see-api',next:'ugc-characters'
+  },
+  'ugc-characters':{
+    company:'VoyceMe',companyTag:'voyce',
+    title:'How User-Generated Characters Became the Growth Engine and the Technical Foundation for Consistent Image Generation',
+    subtitle:'UGC wasn\'t in the original plan. Users told us it was necessary. And the avatar generated during character creation ended up solving the hardest problem in the AI generation pipeline.',
+    skills:['UGC Systems','Retention Design','Consumer Product','AI Infrastructure','Behavioral Analysis'],
+    metrics:[{num:'63%',label:'UGC participation rate'},{num:'44%',label:'Character creation penetration'},{num:'~3x',label:'Avg regenerations per UGC user'},{num:'54%',label:'D1 retention for UGC creators'}],
+    sections:[
+      {num:'01',title:'The Setup',body:'Fableverse launched with a curated set of characters and story scenarios. Pre-built characters had a ceiling. User-created characters didn\'t — because the content library scaled with the community. The behavioral data made the direction obvious: users who created their own characters retained dramatically better. Leadership described UGC as the platform\'s saving grace. The insight behind the pivot was about ownership. Users who created their own characters weren\'t just interacting with the platform. They were invested in it.'},
+      {num:'02',title:'What Users Were Actually Building',body:'The most interesting signal from creation data wasn\'t completion rate — it was editing behavior. Around 30–40% of users who reached the character description step were editing extensively, iterating on specific traits, coming back to refine. And in the avatar generation step, when the first generated avatar didn\'t match what a user had in mind, they didn\'t accept it. They typed specific revision requests. Users were not exploring the platform\'s possibilities. They were trying to manifest something specific they had already imagined.'},
+      {num:'03',title:'The Creation Flow Redesign',body:'The original creation flow was open-ended — which sounds good but creates a blank page problem. We replaced it with a Mad Libs-style flow that gave structure without removing creative control: name, personality traits, narrative style, visual identity in sequence.<br><br>Completion rates improved from 6–7% to 10–12%. At one point during testing we hit 40%, which told us the direction was right even if the specific implementation needed refinement. Screen jumps during the flow were causing drop-off that had nothing to do with user intent — fixing the visual stability removed invisible friction.'},
+      {num:'04',title:'The Technical Consequence',body:'The UGC creation flow had a technical consequence that became one of the most important architectural decisions in the platform.<br><br>During character creation, users generated an avatar representing their character. When analyzing generation quality failures in daily reviews, a pattern kept appearing: character consistency was the primary failure mode. Generated scenes didn\'t maintain recognizable characters across conversations because the system had no reliable anchor for what the character looked like.<br><br>The avatar was already there. If we used the character\'s creation avatar as the seed image for in-chat generation, we had the consistency anchor we were missing. By January, the system was explicitly using the base image plus recent conversation context as generation input. The UGC creation flow and the Scene Engine generation pipeline were now directly connected.'},
+      {num:'05',title:'The Moderation Challenge',body:'Letting users create characters and enabling mature content interactions introduced moderation complexity we hadn\'t fully architected for. In November, NSFW-tagged characters were automatically switched to a different generation model. The intention was right. The execution created problems — errors spiked, power users were hitting walls after 5–10 messages, engagement among the most active users halved.<br><br>The diagnosis mattered: this wasn\'t a content policy failure, it was a product quality failure. Users had opted into mature content and were being served error messages and terms-of-service language mid-roleplay. We moved to a partial reversal: stopping the automatic model switch while preserving user-initiated mature mode for those who explicitly opted in. Leadership tested the fix within 15 minutes of the diagnosis call.'},
+      {num:'06',title:'What I Learned',body:'Ownership is not a feature. It\'s a psychological state that changes why people return to a product. We didn\'t manufacture the engagement lift by designing clever retention mechanics — we created the conditions for ownership and the engagement followed.<br><br>When you give users genuine creative freedom, they tell you something true about what they actually want. Sometimes that truth is different from what you expected. The mature content behavior was not a misuse of the platform. It was users being honest about what they were looking for. The moderation decision that halved power user engagement was a case study in the cost of getting that response wrong.'}
+    ],prev:'prompt-infra',next:'onboarding'
+  },
+  'onboarding':{
+    company:'Quso.ai',companyTag:'quso',
+    title:'Redesigning Quso.ai Onboarding Around User Intent to Lift Trial Conversion by 69%',
+    subtitle:'How behavioral segmentation in session data revealed two completely different user types being forced through the same flow — and what happened when we gave each group what they actually needed.',
+    skills:['Onboarding','Behavioural Segmentation','Conversion Optimisation','A/B Testing','Lifecycle Design'],
+    metrics:[{num:'+69%',label:'Trial-to-paid conversion lift'},{num:'+83%',label:'Higher ARPPU, Early Bird cohort'},{num:'3min',label:'Time-to-value (was 12min)'},{num:'~8%',label:'Churn rate (was 17%)'}],
+    sections:[
+      {num:'01',title:'The Setup',body:'Trial-to-paid conversion was stuck at 14% — well below the industry average of 24%. We\'d tried the usual fixes: shorter flows, better CTAs, more nudges. Nothing moved the needle.<br><br>When I started pulling session data in Fullstory and funnel analysis in Mixpanel, a different picture emerged. The product wasn\'t the primary problem. The onboarding was treating every user the same way, and users were not the same.'},
+      {num:'02',title:'The Segmentation',body:'The behavioral pattern split cleanly into two distinct types. I named them Explorers and Early Birds.<br><br><strong>Explorers</strong> were lower-intent users who arrived curious but uncommitted. They read tooltips, watched tutorials, clicked around to build context. When the onboarding flow pushed them toward action before they felt ready, they stalled and dropped off.<br><br><strong>Early Birds</strong> were the opposite — high-intent users who arrived knowing what they wanted. They skipped help content entirely and went straight for advanced actions. When the onboarding slowed them down with tutorials they didn\'t need, they churned from frustration rather than confusion.<br><br>Both groups were being forced through the same linear trial experience. That single decision was the root cause of most of the conversion and retention problems.'},
+      {num:'03',title:'What I Built',body:'Two parallel onboarding tracks triggered by behavioral signals in the first 60–90 seconds of a session.<br><br><strong>Early Bird path:</strong> Eliminated every step between them and their first successful outcome. Time-to-value dropped from 12 minutes to under 3. Stripped out the tutorial prompts, removed setup checklist friction, surfaced the core features they were already looking for.<br><br><strong>Explorer path:</strong> Slowed down, built context, earned confidence before asking for commitment. Light education at each step, contextual tooltips triggered by specific actions, optional guidance that paced itself to the user.'},
+      {num:'04',title:'The Lifecycle Layer',body:'The segmentation extended into lifecycle messaging. Early Birds received action-oriented prompts: here is what you can do next, here is what you haven\'t tried yet. Explorers received social proof and reassurance: here is what similar users accomplished, here is why this step matters. Same triggers, different content based on which track the user had entered.<br><br>I also built a churn prediction model using frequency, recency, and usage depth signals scored across 7 and 30-day cohorts. At-risk users received smart nudges through MoEngage calibrated to their specific drop-off pattern.'},
+      {num:'05',title:'The Results',body:'Trial-to-paid conversion improved from 14% to 23% — a 69% lift. Week 2 retention improved by 31%. Churn dropped from 17% to ~8%.<br><br>The ARPPU finding was the result that stayed with me longest. Early Bird users who converted through the fast-track path had 83% higher average revenue per paid user than slower or misaligned users. Routing users correctly at the top of the funnel changed the quality of the customers who reached the bottom of it.'},
+      {num:'06',title:'What I Learned',body:'The Explorer and Early Bird segmentation came from watching sessions rather than from a framework I brought in. I named the segments after I saw the behavior, not before.<br><br>The broader lesson: conversion problems are often segmentation problems in disguise. When aggregate metrics look stuck, the first question should be whether the population driving that metric is actually uniform. In this case it was not — and once we stopped treating it as uniform, the numbers moved quickly.'}
+    ],prev:'ugc-characters',next:'ai-writer'
+  },
+  'ai-writer':{
+    company:'Quso.ai',companyTag:'quso',
+    title:'Solving the Blank Page Problem in AI Writer to Drive a 3x Increase in Content Output at Quso.ai',
+    subtitle:'How behavioral observation revealed a $17.8K MRR opportunity — and why the first version failed, and the second worked.',
+    skills:['AI Feature Design','Behavioral Discovery','Product GTM','Prompt Engineering','MRR Growth'],
+    metrics:[{num:'$17.8K',label:'MRR added within 60 days'},{num:'+41%',label:'Conversion lift post-launch'},{num:'9%→29%',label:'Feature adoption in 14 days'},{num:'3x',label:'Content output per session'}],
+    sections:[
+      {num:'01',title:'The Setup',body:'Quso.ai was built around a clear value proposition: take a long-form video and turn it into clips. Users arrived, uploaded, generated clips, and then left — not because they were done, but because the next step in their workflow happened somewhere else.<br><br>Fullstory sessions told the story clearly: users would clip a video, export a transcript, and then disappear for 45–60 minutes before returning. Over 60% of users were following a multi-tool workflow: clip in Quso, write a blog in ChatGPT or Jasper, build a carousel in Canva. We were solving the first 10% of the job.'},
+      {num:'02',title:'The Failed First Attempt',body:'The first version of AI Writer was a chat interface called Viddy AI Assistant. The concept was straightforward — let users talk to their transcript and generate content. The transcript was already there. The AI capability was already there. We just needed to connect them through a conversational interface.<br><br>Adoption was flat. Fullstory sessions showed users opening the chat interface, hovering over the input, and closing it without typing anything. The hesitation pattern was consistent. Users weren\'t confused about what the feature was. They were anxious about what to type. The blank input created a decision burden that most users resolved by doing nothing. The model worked. The interface was the problem.'},
+      {num:'03',title:'The Fix',body:'The proposal was a pill-based prompting system layered on top of the existing chat interface. Five pills on the transcript review screen, each representing a high-value content output: Write Blog, Generate Captions, Extract Key Ideas, Twitter Thread, Timestamps. Each pill triggered a pre-configured prompt using the transcript content. No blank page. No decision about what to type. One click to a first output.<br><br>Critically, this was not a replacement for the chat interface — Viddy AI Assistant remained available for power users. The pills became the default entry point, reducing friction for the majority while preserving full flexibility.<br><br>Pill ordering was personalized by user type. Founders saw Write Blog first. Creators saw Captions first. The ordering mapped to behavioral relevance, not aesthetics.'},
+      {num:'04',title:'The Results',body:'AI Writer usage jumped from 9% to 29% of active users within 14 days of launch. Content output per session tripled. Session time increased by 35% for users who engaged with the feature.<br><br>Users who used two or more pills in a single session showed 54% higher 7-day retention than users who used one or none. The merged pill and chat experience eventually became our most retained and activated surface on the platform — the chat interface that had failed as a standalone product succeeded as a complement to the structured entry point.'},
+      {num:'05',title:'What I Learned',body:'A blank input is not neutral. It\'s a decision burden. When you ask a user to initiate an open-ended AI interaction without giving them a starting point, you\'re asking them to do product design on the spot. Most users will not do that. They will close the interface.<br><br>The pills didn\'t make the AI more capable. They made the capability accessible by removing the decision that was blocking access to it.<br><br>The distinction between killing a failed feature and reframing it also matters here. Viddy AI Assistant didn\'t fail because the concept was wrong. It failed because the entry point created anxiety. The right response was not to discard it — it was to put something in front of it that gave users a successful first interaction before asking them to engage freely.'}
+    ],prev:'onboarding',next:'reverse-trial'
+  },
+  'reverse-trial':{
+    company:'Quso.ai',companyTag:'quso',
+    title:'Redesigning Quso.ai\'s Trial Model to Surface Premium Value Earlier and Lift Upgrade Conversion by 38%',
+    subtitle:'How giving users full access upfront — before asking them to pay — fixed a discovery problem that had been disguised as a conversion problem.',
+    skills:['Monetisation','Reverse Trial Design','PLG','Experimentation','Cross-functional Negotiation'],
+    metrics:[{num:'+38%',label:'Upgrade conversion lift'},{num:'3.4x',label:'Gated feature discovery lift'},{num:'~$31K',label:'ARR added in 90 days'},{num:'2.8x',label:'Premium feature engagement vs control'}],
+    sections:[
+      {num:'01',title:'The Setup',body:'Quso.ai had a feature visibility problem that looked like a pricing problem. Fewer than 8% of free users were ever reaching the premium features. Not because the features were bad — because the paywall was in the way before users had any reason to believe the premium tier was worth paying for. We were asking users to commit to something they had never experienced.'},
+      {num:'02',title:'Getting It Built',body:'Engineering pushback was immediate and legitimate. The team was already stretched. Implementing a reverse trial meant rewriting gating logic, setting up usage caps, and flagging reverse trial users differently in the backend.<br><br>I reframed the problem in terms that made the engineering cost feel proportionate to the actual opportunity: this is not a monetization experiment, it\'s a product visibility test. Fewer than 8% of free users ever see the premium features they would be paying for. They\'re not deciding the product isn\'t worth it — they\'re bouncing before they have enough information to decide anything.<br><br>I backed that with Amplitude funnels showing exactly where users were dropping off relative to premium feature surfaces, and Fullstory recordings of users hitting locked feature icons and exiting. I proposed specific constraints: roll out only to new signups, unlock just two features (AI Influencer and Content Planner), use hardcoded usage limits rather than token logic, run through GrowthBook. The engineering lead could implement it in ~3 days. I owned everything else.'},
+      {num:'03',title:'The Design',body:'The trial experience was designed around one principle: make value visible at the moment users were most likely to act on it.<br><br>I defined usage caps that created genuine urgency without feeling punitive — enough to experience the capability and form a judgment, not enough to extract full value without committing. In-product messaging made trial status transparent: labels showing remaining uses, nudges timed to appear after a completed generation rather than before.<br><br>The lifecycle layer used MoEngage to trigger contextual emails based on which features users had actually engaged with during the trial. Someone who had used AI Influencer received messaging about what they\'d lose access to. The upgrade ask was specific to their experience, not generic.'},
+      {num:'04',title:'The Results',body:'Upgrade conversion increased by 38% within two weeks of launch. Gated feature discovery jumped 3.4x. Average session duration for trial users increased by 25%. Users in the trial group engaged with premium features 2.8x more than the control group. ~$31K ARR added in 90 days.<br><br>The reverse trial became the default onboarding standard — not treated as a one-time experiment, but the model we built everything else around.'},
+      {num:'05',title:'What I Learned',body:'The thing I got right was the reframe. Treating a conversion problem as a discovery problem changed the entire approach. If the problem is conversion, the solutions are pricing levers and urgency mechanics. If the problem is discovery, the solution is getting users to the value before asking them to pay for it.<br><br>When a cross-functional ask meets resistance, the first question is whether you\'ve translated the request into the language of the team you\'re asking. A growth initiative pitched as a growth initiative gets treated as optional. The same initiative pitched as a product quality problem gets treated as necessary.'}
+    ],prev:'ai-writer',next:'pricing'
+  },
+  'pricing':{
+    company:'Quso.ai',companyTag:'quso',
+    title:'Rebuilding Quso.ai\'s Pricing Architecture from Three Undifferentiated Plans to a Hero-Led Monetization System',
+    subtitle:'How I redesigned the entire pricing architecture for a creator SaaS — from a three-plan structure with no clear story to a hero-led system that drove 78% of users to annual subscriptions.',
+    skills:['Pricing Strategy','Monetisation','A/B Testing','ARPU Growth','Regional Pricing'],
+    metrics:[{num:'78%',label:'Users on annual subscriptions'},{num:'$3.7K',label:'MRR from mobile Plus Plan, month 1'},{num:'+18%',label:'ARPU improvement via add-ons'},{num:'PPP',label:'Regional pricing opened LATAM'}],
+    sections:[
+      {num:'01',title:'The Setup',body:'When I took on pricing at Quso.ai, the product had three plans and no clear story connecting them. Free, and then two paid tiers with unclear differentiation between them. The pricing page didn\'t guide users toward a decision. There was no hero plan that anchored the value proposition. Price points hadn\'t been thought through in relation to competitors, willingness to pay, or discount headroom needed to run promotions without eroding perceived value.'},
+      {num:'02',title:'The Hero Plan Decision',body:'The first structural decision was to establish a hero plan. A hero plan is not just the middle tier — it\'s the tier the pricing page is designed to sell. Everything else exists in relation to it.<br><br>I designed Growth as the hero. The name was deliberate: it spoke directly to the primary job Quso users were trying to do. Essential became the entry tier. Feature tiering was rebuilt around behavioral logic: features that create immediate value but have a usage ceiling belong in free because they drive activation; features that create compounding value over time belong in paid; features that signal serious professional use belong in higher tiers.<br><br>The pricing page was redesigned so Growth was the obvious choice — visual hierarchy, comparison structure, and CTA placement all pointed to the same tier.'},
+      {num:'03',title:'The Experiments',body:'Supawall gave us the ability to run pricing experiments without engineering overhead. I used it to test plan visibility, urgency messaging, and annual vs monthly framing across cohorts. The annual plan push was deliberate: annual subscribers have dramatically lower churn and higher LTV. Getting users to commit annually at the point of conversion was a monetization priority.<br><br>The discount architecture was built into price points from the start — meaningful discount headroom while keeping the full price credible.'},
+      {num:'04',title:'Mobile, Add-ons & Regional Pricing',body:'<strong>Mobile Plus Plan:</strong> Mobile traffic was growing but the pricing experience hadn\'t been built for mobile users. I scoped a mobile-specific plan with pricing calibrated to mobile usage patterns. It generated $3.7K MRR in its first month, almost entirely from Tier 1 markets.<br><br><strong>Feature-based add-ons:</strong> Some capabilities had value for specific segments that didn\'t map cleanly to tier packaging. Offering them as standalone add-ons rather than forcing full tier upgrades improved ARPU by 18% from add-on revenue alone.<br><br><strong>Regional pricing:</strong> I researched how comparable platforms structured PPP-adjusted pricing and introduced it for India, Southeast Asia, and LATAM. The signal that it worked: LATAM adoption started materializing from users who had been in the funnel but not converting.'},
+      {num:'05',title:'The Results',body:'78% of paying users upgraded to annual subscriptions. Mobile Plus Plan: $3.7K MRR in month one. ARPU improved 18% from feature add-ons. LATAM adoption opened a market that had previously shown intent without conversion. The pricing architecture built during this period became the foundation the product scaled on as Quso moved past $2M ARR.'},
+      {num:'06',title:'What I Learned',body:'Pricing is one of the most underleveraged levers in early-stage SaaS because it feels like a business decision rather than a product decision. The reality is that pricing architecture shapes user behavior as directly as any feature does. The tier a user lands in determines which features they access, which creates the habits that drive retention, which determines lifetime value.<br><br>The hero plan decision was the most important single change — it gave the conversion path a direction. Before Growth was the hero, the pricing page presented options. After, it presented a recommendation. Users don\'t want options when deciding whether to pay. They want to be told what to do and given a credible reason to do it.'}
+    ],prev:'reverse-trial',next:null
+  },
+};
+
+function renderAllProjects(filter){
+  const grid=document.getElementById('projects-all-grid');
+  const filtered=filter==='all'?allProjects:allProjects.filter(p=>p.type.includes(filter));
+  grid.innerHTML=filtered.map(p=>`
+    <div class="project-card" onclick="showCaseStudy('${p.id}')">
+      <div class="project-card-bar"></div>
+      <div class="project-card-top">
+        <div class="project-num">${p.num} / ${p.company}</div>
+        <span class="project-company-tag tag-${p.companyTag}">${p.label}</span>
+        <h3>${p.cardTitle||p.title}</h3>
+        <p>${p.desc}</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tags">${p.tags.map(t=>`<span class="tag-pill">${t}</span>`).join('')}</div>
+        <div class="project-cta">View case study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterProjects(filter,btn){
+  document.querySelectorAll('#page-projects-page .filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderAllProjects(filter);
+}
+
+function showCaseStudy(id){
+  const cs=caseStudies[id],proj=allProjects.find(p=>p.id===id);
+  if(!cs||!proj)return;
+  const tagClass=cs.companyTag==='voyce'?'tag-voyce':cs.companyTag==='ticker'?'tag-ticker':'tag-quso';
+  document.getElementById('cs-content-area').innerHTML=`
+    <div class="cs-header">
+      <div class="cs-header-inner">
+        <div class="page-header-nav">
+          <a onclick="showPage('projects-page')" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Projects
+          </a>
+          <span class="project-company-tag ${tagClass}" style="font-size:11px;padding:5px 12px;">${cs.company}</span>
+        </div>
+        <h1 class="cs-title">${cs.title}</h1>
+        <p class="cs-subtitle">${cs.subtitle}</p>
+        <div class="cs-skill-tags">${cs.skills.map(s=>`<span class="tag-pill">${s}</span>`).join('')}</div>
+      </div>
+    </div>
+    <div class="cs-body">
+      <div class="cs-content">
+        ${cs.sections.map(s=>`
+          <div class="cs-section">
+            <div class="cs-section-num">${s.num}</div>
+            <h2 class="cs-section-title">${s.title}</h2>
+            <p>${s.body}</p>
+          </div>
+        `).join('')}
+        <div class="cs-section" style="border-bottom:none">
+          <button class="like-btn" id="like-btn-${id}" onclick="toggleLike('${id}',${proj.likes})">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span id="like-count-${id}">${proj.likes}</span>
+          </button>
+        </div>
+      </div>
+      <div class="cs-sidebar">
+        <div class="cs-sidebar-card">
+          <div class="cs-sidebar-label">Key Metrics</div>
+          ${cs.metrics.map(m=>`<div class="cs-metric"><div class="cs-metric-num">${m.num}</div><div class="cs-metric-label">${m.label}</div></div>`).join('')}
+        </div>
+      </div>
+    </div>
+    <div class="cs-nav-bottom">
+      ${cs.prev?`<span class="cs-nav-btn" onclick="showCaseStudy('${cs.prev}')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Previous Project</span>`:'<span></span>'}
+      ${cs.next?`<span class="cs-nav-btn next" onclick="showCaseStudy('${cs.next}')">Next Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>`:'<span></span>'}
+    </div>
+  `;
+  showPage('case-study');
+}
+
+function toggleLike(id,base){
+  const btn=document.getElementById('like-btn-'+id),cnt=document.getElementById('like-count-'+id);
+  if(btn.classList.contains('liked')){btn.classList.remove('liked');cnt.textContent=base;}
+  else{btn.classList.add('liked');cnt.textContent=base+1;}
+}
+
+/* LAB TOOLS */
+const labTools=[
+  {id:'ice',cat:'prioritisation',num:'01',title:'ICE Score Calculator',badge:'Prioritisation',badgeClass:'dv',barClass:'bv',desc:'Rate a feature on Impact, Confidence, and Ease. Get an instant prioritisation recommendation.',html:`<div class="srow"><div class="stop"><span class="lbl" style="margin:0">Impact</span><span class="sval" id="lice-iv">5</span></div><input type="range" class="slider" id="lice-i" min="1" max="10" value="5" oninput="calcLICE()"></div><div class="srow"><div class="stop"><span class="lbl" style="margin:0">Confidence</span><span class="sval" id="lice-cv">5</span></div><input type="range" class="slider" id="lice-c" min="1" max="10" value="5" oninput="calcLICE()"></div><div class="srow"><div class="stop"><span class="lbl" style="margin:0">Ease</span><span class="sval" id="lice-ev">5</span></div><input type="range" class="slider" id="lice-e" min="1" max="10" value="5" oninput="calcLICE()"></div><div class="result show"><div class="rbig" id="lice-score">5.0</div><div class="rlbl">ICE Score</div><div class="rtxt" id="lice-verdict">Prioritise if time allows — solid but not urgent.</div></div>`},
+  {id:'ret',cat:'retention',num:'02',title:'Retention Curve Visualiser',badge:'Retention',badgeClass:'dc',barClass:'bc',desc:'Enter your D1/D7/D14/D30 numbers. See your curve and get a diagnosis.',html:`<div class="ret-inputs"><div class="rig"><span class="lbl">D1 %</span><input type="number" class="rinp" id="lrd1" value="60" min="0" max="100" oninput="calcLRet()"></div><div class="rig"><span class="lbl">D7 %</span><input type="number" class="rinp" id="lrd7" value="30" min="0" max="100" oninput="calcLRet()"></div><div class="rig"><span class="lbl">D14 %</span><input type="number" class="rinp" id="lrd14" value="20" min="0" max="100" oninput="calcLRet()"></div><div class="rig"><span class="lbl">D30 %</span><input type="number" class="rinp" id="lrd30" value="12" min="0" max="100" oninput="calcLRet()"></div></div><div class="ret-bars"><div class="ret-wrap"><div class="ret-bar" id="lrb1" style="height:60%;background:var(--violet)"></div><div class="ret-lbl">D1</div></div><div class="ret-wrap"><div class="ret-bar" id="lrb2" style="height:30%;background:var(--violet-light)"></div><div class="ret-lbl">D7</div></div><div class="ret-wrap"><div class="ret-bar" id="lrb3" style="height:20%;background:var(--coral)"></div><div class="ret-lbl">D14</div></div><div class="ret-wrap"><div class="ret-bar" id="lrb4" style="height:12%;background:var(--coral-light)"></div><div class="ret-lbl">D30</div></div></div><div class="result show rv"><div class="rtxt" id="lret-insight" style="margin:0;color:var(--violet)">D1 to D7 drop is 50% — typical. Nail the aha moment in first session.</div></div>`},
+  {id:'cohort',cat:'retention',num:'03',title:'Cohort Health Checker',badge:'Retention',badgeClass:'dp',barClass:'bp',desc:'Compare D1/D7/D30 across two cohorts. Find which is healthier and why.',html:`<div class="cg"><div><div class="cohort-title cta-c">Cohort A</div><div class="rig" style="margin-bottom:6px"><span class="lbl">D1 %</span><input type="number" class="rinp" id="lca1" value="55" min="0" max="100" oninput="calcLCohort()"></div><div class="rig" style="margin-bottom:6px"><span class="lbl">D7 %</span><input type="number" class="rinp" id="lca7" value="28" min="0" max="100" oninput="calcLCohort()"></div><div class="rig"><span class="lbl">D30 %</span><input type="number" class="rinp" id="lca30" value="14" min="0" max="100" oninput="calcLCohort()"></div></div><div><div class="cohort-title ctb">Cohort B</div><div class="rig" style="margin-bottom:6px"><span class="lbl">D1 %</span><input type="number" class="rinp" id="lcb1" value="42" min="0" max="100" oninput="calcLCohort()"></div><div class="rig" style="margin-bottom:6px"><span class="lbl">D7 %</span><input type="number" class="rinp" id="lcb7" value="30" min="0" max="100" oninput="calcLCohort()"></div><div class="rig"><span class="lbl">D30 %</span><input type="number" class="rinp" id="lcb30" value="22" min="0" max="100" oninput="calcLCohort()"></div></div></div><div class="cbars"><div class="cbar-wrap"><div class="cbar" id="lcha1" style="height:55%;background:var(--violet)"></div><div class="cbar-lbl">A D1</div></div><div class="cbar-wrap"><div class="cbar" id="lcha7" style="height:28%;background:var(--violet-light)"></div><div class="cbar-lbl">A D7</div></div><div class="cbar-wrap"><div class="cbar" id="lcha30" style="height:14%;background:rgba(107,63,160,0.4)"></div><div class="cbar-lbl">A D30</div></div><div style="width:8px;flex-shrink:0"></div><div class="cbar-wrap"><div class="cbar" id="lchb1" style="height:42%;background:var(--coral)"></div><div class="cbar-lbl">B D1</div></div><div class="cbar-wrap"><div class="cbar" id="lchb7" style="height:30%;background:var(--coral-light)"></div><div class="cbar-lbl">B D7</div></div><div class="cbar-wrap"><div class="cbar" id="lchb30" style="height:22%;background:rgba(232,99,74,0.4)"></div><div class="cbar-lbl">B D30</div></div></div><div class="result show"><div class="rlbl">Verdict</div><div class="rbig" id="lch-winner" style="font-size:20px;margin:4px 0">Cohort A wins early</div><div class="rtxt" id="lch-insight">A has stronger D1 but B holds better long-term.</div></div>`},
+  {id:'ns',cat:'strategy',num:'04',title:'North Star Metric Builder',badge:'Strategy',badgeClass:'dg',barClass:'bg',desc:'Pick your product type and growth stage. Get a recommended North Star with supporting metrics.',html:`<div><span class="lbl">Product type</span><select class="sel" id="lns-type" onchange="calcLNS()"><option value="">Select product type</option><option value="consumer">Consumer App</option><option value="b2b">B2B SaaS</option><option value="marketplace">Marketplace</option><option value="fintech">Fintech / BFSI</option><option value="content">Content / Media</option><option value="api">API / Developer Platform</option></select></div><div><span class="lbl">Growth stage</span><select class="sel" id="lns-stage" onchange="calcLNS()"><option value="">Select stage</option><option value="pmf">0 to 1 — finding PMF</option><option value="growth">Growth — scaling acquisition</option><option value="retention">Retention — improving stickiness</option><option value="monetisation">Monetisation — converting to revenue</option></select></div><div class="result" id="lns-result"><div class="rlbl">North Star Metric</div><div id="lns-metric" style="font-family:'Cabinet Grotesk',sans-serif;font-size:15px;font-weight:800;color:var(--violet);margin:6px 0;line-height:1.3;"></div><div class="ns-tree" id="lns-tree"></div></div>`},
+  {id:'funnel',cat:'growth',num:'05',title:'Activation Funnel Simulator',badge:'Growth',badgeClass:'di',barClass:'bi',desc:'Enter funnel conversion rates. Find where you\'re losing most.',html:`<div class="funnel"><div class="fstep"><span class="flbl">Sign-up</span><input type="number" class="finp" value="100" readonly style="background:var(--cream-dark);color:var(--text-muted);"><div class="ftrack"><div class="ffill" style="width:100%"></div></div></div><div class="fstep"><span class="flbl">Onboard</span><input type="number" class="finp" id="lfn-ob" value="65" min="0" max="100" oninput="calcLFunnel()"><div class="ftrack"><div class="ffill" id="lff-ob" style="width:65%"></div></div></div><div class="fstep"><span class="flbl">Aha moment</span><input type="number" class="finp" id="lfn-aha" value="40" min="0" max="100" oninput="calcLFunnel()"><div class="ftrack"><div class="ffill" id="lff-aha" style="width:40%"></div></div></div><div class="fstep"><span class="flbl">Core action</span><input type="number" class="finp" id="lfn-ca" value="22" min="0" max="100" oninput="calcLFunnel()"><div class="ftrack"><div class="ffill" id="lff-ca" style="width:22%"></div></div></div><div class="fstep"><span class="flbl">Activated</span><input type="number" class="finp" id="lfn-act" value="14" min="0" max="100" oninput="calcLFunnel()"><div class="ftrack"><div class="ffill" id="lff-act" style="width:14%"></div></div></div></div><div class="result show rc"><div class="rlbl">Biggest leak</div><div class="rbig c" id="lfn-leak" style="font-size:18px;margin:4px 0">Aha to Core action</div><div class="rtxt" id="lfn-insight">You are losing 45% of users here.</div></div>`},
+  {id:'fvd',cat:'prioritisation',num:'06',title:'Feature vs. Tech Debt Prioritiser',badge:'Prioritisation',badgeClass:'da',barClass:'ba',desc:'Add items, rate each on user value and complexity. Get a ranked backlog.',html:`<div style="display:flex;gap:8px;"><input type="text" class="inp" id="lfvd-name" placeholder="Feature or debt item" style="flex:1;"><button class="tbtn" onclick="addLFvD()" style="width:auto;padding:9px 14px;white-space:nowrap">Add</button></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;"><div><span class="lbl">User value (1-10)</span><input type="number" class="inp" id="lfvd-uv" value="7" min="1" max="10"></div><div><span class="lbl">Complexity (1-10)</span><input type="number" class="inp" id="lfvd-tc" value="4" min="1" max="10"></div></div><div class="ranked-list" id="lfvd-list"></div>`},
+  {id:'pricing',cat:'strategy',num:'07',title:'Pricing Page Analyser',badge:'Strategy',badgeClass:'do',barClass:'bo',desc:'Describe your pricing setup. Get flags for common anti-patterns that kill conversion.',html:`<div><span class="lbl">Number of pricing tiers</span><select class="sel" id="lpr-tiers" onchange="analyseLPricing()"><option value="1">1 tier</option><option value="2">2 tiers</option><option value="3" selected>3 tiers</option><option value="4">4 tiers</option><option value="5">5+ tiers</option></select></div><div class="checklist"><div class="ci" onclick="this.classList.toggle('on');analyseLPricing()" id="lpr-free"><div class="cbox"></div><span class="ctxt">Has a free tier or free trial</span></div><div class="ci" onclick="this.classList.toggle('on');analyseLPricing()" id="lpr-anchor"><div class="cbox"></div><span class="ctxt">Has an obvious hero plan (visually highlighted)</span></div><div class="ci" onclick="this.classList.toggle('on');analyseLPricing()" id="lpr-annual"><div class="cbox"></div><span class="ctxt">Offers annual billing with a clear saving</span></div><div class="ci" onclick="this.classList.toggle('on');analyseLPricing()" id="lpr-gap"><div class="cbox"></div><span class="ctxt">Clear feature gap between tiers, not just limits</span></div><div class="ci" onclick="this.classList.toggle('on');analyseLPricing()" id="lpr-social"><div class="cbox"></div><span class="ctxt">Social proof on the pricing page</span></div></div><div class="pflags" id="lpr-flags"></div>`},
+  {id:'prd',cat:'scoping',num:'08',title:'PRD Readiness Checker',badge:'Scoping',badgeClass:'dd',barClass:'bd',desc:'Eight questions to answer before writing the PRD.',html:`<div class="checklist" id="lprd-qs"><div class="ci" onclick="this.classList.toggle('on');calcLPRD()"><div class="cbox"></div><span class="ctxt">I know the specific user segment this solves for</span></div><div class="ci" onclick="this.classList.toggle('on');calcLPRD()"><div class="cbox"></div><span class="ctxt">I have a measurable success metric defined</span></div><div class="ci" onclick="this.classList.toggle('on');calcLPRD()"><div class="cbox"></div><span class="ctxt">I know what the smallest shippable version is</span></div><div class="ci" onclick="this.classList.toggle('on');calcLPRD()"><div class="cbox"></div><span class="ctxt">I have identified edge cases and failure states</span></div><div class="ci" onclick="this.classList.toggle('on');calcLPRD()"><div class="cbox"></div><span class="ctxt">I know what I am explicitly NOT building in v1</span></div><div class="ci" onclick="this.classList.toggle('on');calcLPRD()"><div class="cbox"></div><span class="ctxt">Engineering has been consulted on feasibility</span></div><div class="ci" onclick="this.classList.toggle('on');calcLPRD()"><div class="cbox"></div><span class="ctxt">I have mapped the full user journey around this feature</span></div><div class="ci" onclick="this.classList.toggle('on');calcLPRD()"><div class="cbox"></div><span class="ctxt">I know how this will be measured post-launch</span></div></div><div style="display:flex;justify-content:space-between;align-items:center;"><span class="lbl" style="margin:0">Readiness</span><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted)" id="lprd-txt">0 / 8</span></div><div class="pbar"><div class="pfill" id="lprd-bar" style="width:0%"></div></div><div class="result" id="lprd-result"><div class="rtxt" id="lprd-verdict"></div></div>`},
+  {id:'okr',cat:'strategy',num:'09',title:'OKR Sanity Checker',badge:'Strategy',badgeClass:'dt',barClass:'bt',desc:'Paste your Key Result. Get instant checks across five things that make KRs fail.',html:`<div><span class="lbl">Your Key Result</span><textarea class="inp" id="lokr-input" rows="3" placeholder="e.g. Increase user engagement by improving the onboarding flow" oninput="checkLOKR()" style="resize:none;line-height:1.5;"></textarea></div><div class="okr-checks"><div class="okr-item"><div class="odot" id="lokr-num"></div><span>Contains a specific number or percentage</span></div><div class="okr-item"><div class="odot" id="lokr-time"></div><span>Specifies a time frame</span></div><div class="okr-item"><div class="odot" id="lokr-outcome"></div><span>Describes an outcome, not an output</span></div><div class="okr-item"><div class="odot" id="lokr-ambitious"></div><span>Sounds ambitious</span></div><div class="okr-item"><div class="odot" id="lokr-control"></div><span>Within your team's control</span></div></div><div class="result" id="lokr-result"><div class="rtxt" id="lokr-verdict"></div></div>`},
+  {id:'scope',cat:'scoping',num:'10',title:'Feature Scope Estimator',badge:'Scoping',badgeClass:'db',barClass:'bb',desc:'Answer 8 questions about a feature. Get a rough complexity estimate.',html:`<div class="checklist" id="lscope-qs"><div class="ci" onclick="this.classList.toggle('on');calcLScope()"><div class="cbox"></div><span class="ctxt">Requires new API or third-party integration</span></div><div class="ci" onclick="this.classList.toggle('on');calcLScope()"><div class="cbox"></div><span class="ctxt">Involves changes to the data model or schema</span></div><div class="ci" onclick="this.classList.toggle('on');calcLScope()"><div class="cbox"></div><span class="ctxt">Has significant UX complexity (multi-step flows)</span></div><div class="ci" onclick="this.classList.toggle('on');calcLScope()"><div class="cbox"></div><span class="ctxt">Needs to work across web and mobile</span></div><div class="ci" onclick="this.classList.toggle('on');calcLScope()"><div class="cbox"></div><span class="ctxt">Touches existing core flows (high regression risk)</span></div><div class="ci" onclick="this.classList.toggle('on');calcLScope()"><div class="cbox"></div><span class="ctxt">Requires real-time processing or async queuing</span></div><div class="ci" onclick="this.classList.toggle('on');calcLScope()"><div class="cbox"></div><span class="ctxt">Has significant edge cases for different user states</span></div><div class="ci" onclick="this.classList.toggle('on');calcLScope()"><div class="cbox"></div><span class="ctxt">Needs analytics instrumentation from scratch</span></div></div><div class="result" id="lscope-result"><div class="rlbl">Estimated complexity</div><div class="rbig" id="lscope-estimate" style="font-size:22px;margin:4px 0;"></div><div class="rtxt" id="lscope-questions"></div></div>`},
+];
+
+function renderLabTools(filter){
+  const grid=document.getElementById('lab-page-grid');
+  const filtered=filter==='all'?labTools:labTools.filter(t=>t.cat===filter);
+  grid.innerHTML=filtered.map(t=>`
+    <div class="lab-full-card" data-cat="${t.cat}">
+      <div class="tbar ${t.barClass}"></div>
+      <div class="lab-full-header">
+        <div class="lab-full-header-left"><div class="lab-num">${t.num}</div><h3>${t.title}</h3></div>
+        <span class="lab-tool-badge ${t.badgeClass}">${t.badge}</span>
+      </div>
+      <div class="lab-full-body">
+        <p class="lab-full-desc">${t.desc}</p>
+        ${t.html}
+      </div>
+    </div>
+  `).join('');
+  setTimeout(()=>{try{calcLCohort();}catch(e){}try{calcLFunnel();}catch(e){}},100);
+}
+
+function filterLab(filter,btn){
+  document.querySelectorAll('#page-lab-page .filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderLabTools(filter);
+}
+
+/* LAB LOGIC */
+const nsData={consumer:{pmf:{m:'Users completing core action in first session',s:['D1 retention rate','Time to first core action','% users returning within 7 days','Qualitative PMF score']},growth:{m:'Weekly Active Users (WAU)',s:['D1/D7 retention','Organic acquisition rate','Referral coefficient','Feature discovery rate']},retention:{m:'Users hitting habit threshold (e.g. 10+ sessions/month)',s:['D30 retention','Session frequency per week','Feature depth score','Churn rate by cohort']},monetisation:{m:'Trial-to-paid conversion rate',s:['ARPU','Free-to-paid upgrade triggers','Paywall encounter rate','Time to first payment']}},b2b:{pmf:{m:'Accounts completing full onboarding',s:['Time to first value','Activation rate by ICP segment','Support ticket volume','NPS at Day 14']},growth:{m:'Logo growth — new accounts activated per month',s:['Sales cycle length','Activation rate','ICP match rate','Trial-to-paid conversion']},retention:{m:'Net Revenue Retention (NRR)',s:['Monthly churn rate','Feature adoption depth','DAU/MAU per account','Expansion revenue rate']},monetisation:{m:'Annual Recurring Revenue (ARR)',s:['ARPU by tier','Upgrade rate','Expansion MRR','Payback period per customer']}},marketplace:{pmf:{m:'GMV in first 30 days',s:['Supply/demand ratio','First transaction completion rate','Repeat buyer rate','Liquidity by category']},growth:{m:'Monthly GMV',s:['Take rate','Supply growth rate','Demand CAC','Category penetration']},retention:{m:'Repeat transaction rate — buyers returning within 30 days',s:['Buyer LTV','Seller repeat listing rate','Search-to-purchase conversion','Category stickiness']},monetisation:{m:'Net revenue (take rate x GMV)',s:['Take rate optimisation','Premium seller conversion','Advertising attach rate','Margin per transaction']}},fintech:{pmf:{m:'Users completing first transaction',s:['KYC completion rate','Time to first transaction','Drop-off by onboarding step','Trust signals conversion']},growth:{m:'Monthly transacting users (MTU)',s:['Activation rate','Transaction frequency','CAC by channel','Referral rate']},retention:{m:'Monthly transaction frequency per active user',s:['D30 retention','Cross-product adoption','Dormancy rate','Reactivation rate']},monetisation:{m:'Revenue per transacting user',s:['Net interest margin','Fee revenue per user','Premium conversion','Cross-sell attach rate']}},content:{pmf:{m:'Users consuming 3+ pieces in first session',s:['Content discovery rate','Session length','Social share rate','Return visit rate']},growth:{m:'Monthly content starts',s:['Acquisition by content type','Organic search traffic','Content completion rate','Viral coefficient']},retention:{m:'Weekly active readers or viewers',s:['Content consumption depth','Notification opt-in rate','Session frequency','Bookmark rate']},monetisation:{m:'Subscriber conversion rate',s:['Paywall encounter rate','Free-to-paid conversion','ARPU','Churn rate']}},api:{pmf:{m:'Developers making first successful API call',s:['Time to first call (TTFC)','Docs page engagement','Sandbox-to-production rate','Error rate on first call']},growth:{m:'Monthly API calls (volume growth)',s:['Developer activation rate','API call growth MoM','Integration depth per customer','Developer community growth']},retention:{m:'API call retention — MoM consistency per customer',s:['Customer stickiness score','Version upgrade rate','Support deflection rate','NPS for developers']},monetisation:{m:'Revenue per million API calls',s:['Tier upgrade rate','Enterprise contract growth','Usage-based revenue per customer','ARPU by segment']}}};
+
+function calcLICE(){
+  const i=+(document.getElementById('lice-i')||{value:5}).value||5;
+  const c=+(document.getElementById('lice-c')||{value:5}).value||5;
+  const e=+(document.getElementById('lice-e')||{value:5}).value||5;
+  if(document.getElementById('lice-iv'))document.getElementById('lice-iv').textContent=i;
+  if(document.getElementById('lice-cv'))document.getElementById('lice-cv').textContent=c;
+  if(document.getElementById('lice-ev'))document.getElementById('lice-ev').textContent=e;
+  const s=((i+c+e)/3).toFixed(1);
+  if(document.getElementById('lice-score'))document.getElementById('lice-score').textContent=s;
+  const n=parseFloat(s);
+  const v=n<3.5?'Low priority — skip or defer.':n<5.5?'Moderate — worth doing but not urgent.':n<7.5?'Strong candidate — get this into the next sprint.':'Ship this now — high confidence, high value, low effort.';
+  if(document.getElementById('lice-verdict'))document.getElementById('lice-verdict').textContent=v;
+}
+function calcLRet(){
+  const ids=['lrd1','lrd7','lrd14','lrd30'],bars=['lrb1','lrb2','lrb3','lrb4'],colors=['var(--violet)','var(--violet-light)','var(--coral)','var(--coral-light)'];
+  const vals=ids.map(id=>{const el=document.getElementById(id);return el?Math.min(100,Math.max(0,+el.value||0)):0;});
+  bars.forEach((b,i)=>{const el=document.getElementById(b);if(el){el.style.height=vals[i]+'%';el.style.background=colors[i];}});
+  const d17=vals[0]>0?Math.round(((vals[0]-vals[1])/vals[0])*100):0;
+  let ins='';
+  if(vals[0]<30)ins='D1 of '+vals[0]+'% is below benchmark.';
+  else if(d17>65)ins='D1 to D7 drop is '+d17+'%. Aha moment isn\'t sticking.';
+  else if(vals[3]>=25)ins='D30 retention of '+vals[3]+'% is strong.';
+  else ins='D1 to D7 drop is '+d17+'%. Benchmark: 40-50% is acceptable for consumer apps.';
+  if(document.getElementById('lret-insight'))document.getElementById('lret-insight').textContent=ins;
+}
+function calcLCohort(){
+  const get=id=>{const el=document.getElementById(id);return el?+el.value||0:0;};
+  const ad1=get('lca1'),ad7=get('lca7'),ad30=get('lca30');
+  const bd1=get('lcb1'),bd7=get('lcb7'),bd30=get('lcb30');
+  const setH=(id,v)=>{const el=document.getElementById(id);if(el)el.style.height=v+'%';};
+  setH('lcha1',ad1);setH('lcha7',ad7);setH('lcha30',ad30);
+  setH('lchb1',bd1);setH('lchb7',bd7);setH('lchb30',bd30);
+  const aS=ad1*0.2+ad7*0.3+ad30*0.5,bS=bd1*0.2+bd7*0.3+bd30*0.5;
+  const w=aS>=bS?'A':'B';
+  if(document.getElementById('lch-winner'))document.getElementById('lch-winner').textContent='Cohort '+w+' is healthier';
+  let ins='Cohort '+w+' scores better on weighted retention. ';
+  if(ad1>bd1&&ad30<bd30)ins+='A activates better early but B retains better long-term.';
+  else if(ad1<bd1&&ad30>bd30)ins+='A starts slower but retains better over 30 days.';
+  else ins+='The advantage is consistent across time periods.';
+  if(document.getElementById('lch-insight'))document.getElementById('lch-insight').textContent=ins;
+}
+function calcLNS(){
+  const type=(document.getElementById('lns-type')||{value:''}).value;
+  const stage=(document.getElementById('lns-stage')||{value:''}).value;
+  if(!type||!stage)return;
+  const d=nsData[type]&&nsData[type][stage];if(!d)return;
+  if(document.getElementById('lns-metric'))document.getElementById('lns-metric').textContent=d.m;
+  if(document.getElementById('lns-tree'))document.getElementById('lns-tree').innerHTML='<div class="nsi primary"><span class="npre">NSM</span>'+d.m+'</div>'+d.s.map(s=>'<div class="nsi sup"><span class="npre">SR</span>'+s+'</div>').join('');
+  const r=document.getElementById('lns-result');if(r)r.classList.add('show');
+}
+function calcLFunnel(){
+  const steps=[{id:'lfn-ob',fid:'lff-ob',label:'Sign-up to Onboard'},{id:'lfn-aha',fid:'lff-aha',label:'Onboard to Aha moment'},{id:'lfn-ca',fid:'lff-ca',label:'Aha to Core action'},{id:'lfn-act',fid:'lff-act',label:'Core action to Activated'}];
+  const vals=steps.map(s=>{const el=document.getElementById(s.id);return el?Math.min(100,Math.max(0,+el.value||0)):0;});
+  steps.forEach((s,i)=>{const el=document.getElementById(s.fid);if(el)el.style.width=vals[i]+'%';});
+  const prev=[100,...vals];const drops=steps.map((s,i)=>({label:s.label,drop:prev[i]-vals[i],val:vals[i]}));
+  drops.sort((a,b)=>b.drop-a.drop);const worst=drops[0],final=vals[vals.length-1];
+  if(document.getElementById('lfn-leak'))document.getElementById('lfn-leak').textContent=worst.label;
+  const improved=Math.min(100,worst.val+10);const ratio=worst.val>0?improved/worst.val:1;const newFinal=Math.round(final*ratio);
+  if(document.getElementById('lfn-insight'))document.getElementById('lfn-insight').textContent='You are losing '+worst.drop+' out of every 100 users here. Fixing by 10 points would lift activation from '+final+'% to ~'+newFinal+'%.';
+}
+const lfvdItems=[];
+function addLFvD(){
+  const nameEl=document.getElementById('lfvd-name'),uvEl=document.getElementById('lfvd-uv'),tcEl=document.getElementById('lfvd-tc');
+  if(!nameEl)return;
+  const name=nameEl.value.trim(),uv=+uvEl.value,tc=+tcEl.value;
+  if(!name)return;
+  lfvdItems.push({name,uv,tc,score:(uv*2)-tc});
+  nameEl.value='';
+  renderLFvD();
+}
+function renderLFvD(){
+  const sorted=[...lfvdItems].sort((a,b)=>b.score-a.score);
+  const max=sorted.length?Math.max(...sorted.map(x=>x.score),1):1;
+  const min=sorted.length?Math.min(...sorted.map(x=>x.score)):0;
+  const list=document.getElementById('lfvd-list');if(!list)return;
+  list.innerHTML=sorted.map((item,i)=>{
+    const pct=Math.max(5,Math.round(((item.score-min)/(max-min||1))*100));
+    const rec=item.score>=10?'Build this sprint':item.score>=5?'Plan for next cycle':item.score>=0?'Defer and refine':'Skip or revisit';
+    return `<div class="ranked-item"><div class="rnum">${i+1}</div><div class="rinfo"><div class="rname">${item.name}</div><div class="rmeta">${rec} · UV:${item.uv} TC:${item.tc}</div></div><div class="rbar-wrap"><div class="rtrack"><div class="rbar" style="width:${pct}%"></div></div></div></div>`;
+  }).join('');
+}
+function analyseLPricing(){
+  const tiersEl=document.getElementById('lpr-tiers');if(!tiersEl)return;
+  const tiers=+tiersEl.value;
+  const get=id=>{const el=document.getElementById(id);return el&&el.classList.contains('on');};
+  const flags=[];
+  if(tiers>=5)flags.push({t:'warn',m:'5+ tiers creates decision paralysis.'});
+  else if(tiers===4)flags.push({t:'warn',m:'4 tiers is one too many. Consider merging two.'});
+  else flags.push({t:'ok',m:tiers+' tiers is manageable.'});
+  flags.push(get('lpr-free')?{t:'ok',m:'Free tier or trial present.'}:{t:'warn',m:'No free tier or trial.'});
+  flags.push(get('lpr-anchor')?{t:'ok',m:'Hero plan is highlighted.'}:{t:'warn',m:'No highlighted hero plan.'});
+  flags.push(get('lpr-annual')?{t:'ok',m:'Annual billing with clear saving.'}:{t:'warn',m:'No annual billing option.'});
+  flags.push(get('lpr-gap')?{t:'ok',m:'Clear feature gap between tiers.'}:{t:'warn',m:'Only limits differentiate tiers.'});
+  flags.push(get('lpr-social')?{t:'ok',m:'Social proof present.'}:{t:'info',m:'No social proof detected.'});
+  const flagsEl=document.getElementById('lpr-flags');if(!flagsEl)return;
+  flagsEl.innerHTML=flags.map(f=>`<div class="pflag ${f.t}"><div class="pfdot ${f.t}"></div>${f.m}</div>`).join('');
+}
+function calcLPRD(){
+  const qs=document.querySelectorAll('#lprd-qs .ci');if(!qs.length)return;
+  const total=qs.length,checked=document.querySelectorAll('#lprd-qs .ci.on').length;
+  if(document.getElementById('lprd-txt'))document.getElementById('lprd-txt').textContent=checked+' / '+total;
+  if(document.getElementById('lprd-bar'))document.getElementById('lprd-bar').style.width=Math.round((checked/total)*100)+'%';
+  const res=document.getElementById('lprd-result'),verd=document.getElementById('lprd-verdict');
+  if(!res||!verd)return;
+  if(checked===0){res.classList.remove('show');return;}
+  res.classList.add('show');
+  if(checked<=3)verd.textContent='Not ready yet.';
+  else if(checked<=5)verd.textContent='Getting closer. The missing items are most likely to cause back-and-forth with engineering.';
+  else if(checked<=7)verd.textContent='Almost there. Fix the remaining gap before you start writing.';
+  else verd.innerHTML='<strong>Ready to write.</strong>';
+}
+function checkLOKR(){
+  const inp=document.getElementById('lokr-input');if(!inp)return;
+  const t=inp.value.toLowerCase().trim();
+  document.querySelectorAll('#page-lab-page .odot').forEach(d=>d.classList.remove('pass','fail'));
+  if(!t){const r=document.getElementById('lokr-result');if(r)r.classList.remove('show');return;}
+  const hasNum=/\d+%|\d+x|\d+k|\d+m|\d+ (users|accounts|sessions|calls|installs|customers|signups)/.test(t);
+  const hasTime=/(by |within |in |before |end of |q1|q2|q3|q4|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|\d+ days|\d+ weeks|\d+ months)/.test(t);
+  const isOutcome=!/(implement|build|create|launch|release|deploy|add|develop|ship|write|design|set up|run|execute|conduct)/.test(t);
+  const isAmbitious=!/(maintain|keep|ensure|continue|support|monitor|track|sustain)/.test(t);
+  const isControllable=!/(market share|competitor|economy|external|industry|government|regulation)/.test(t);
+  const checks={'lokr-num':hasNum,'lokr-time':hasTime,'lokr-outcome':isOutcome,'lokr-ambitious':isAmbitious,'lokr-control':isControllable};
+  let pass=0;
+  Object.entries(checks).forEach(function(e){const id=e[0],val=e[1];const el=document.getElementById(id);if(el)el.classList.add(val?'pass':'fail');if(val)pass++;});
+  const res=document.getElementById('lokr-result'),verd=document.getElementById('lokr-verdict');
+  if(!res||!verd)return;
+  res.classList.add('show');
+  if(pass<=2)verd.innerHTML='<strong>Needs work.</strong> Add a number, set a deadline, reframe as an outcome.';
+  else if(pass===3)verd.innerHTML='<strong>Partially there.</strong> Two gaps remain.';
+  else if(pass===4)verd.innerHTML='<strong>Almost solid.</strong> Fix the remaining gap.';
+  else verd.innerHTML='<strong>Strong KR.</strong> Measurable, time-bound, outcome-focused.';
+}
+function calcLScope(){
+  const qs=document.querySelectorAll('#lscope-qs .ci');if(!qs.length)return;
+  const checked=document.querySelectorAll('#lscope-qs .ci.on').length;
+  const res=document.getElementById('lscope-result');if(!res)return;
+  res.classList.add('show');
+  if(checked===0){res.classList.remove('show');return;}
+  let estimate='',questions='';
+  if(checked<=2){estimate='Low — 1 to 3 days';questions='Main questions: What are the edge cases? Does this need new instrumentation?';}
+  else if(checked<=4){estimate='Medium — 1 to 2 weeks';questions='Main questions: Have you mapped all failure states? Does this introduce regression risk?';}
+  else if(checked<=6){estimate='High — 2 to 4 weeks';questions='Main questions: Can scope be reduced for v1? Is there a smaller proxy you can ship in 3 days?';}
+  else{estimate='Very high — 4+ weeks';questions='Strong recommendation: reduce scope for v1.';}
+  if(document.getElementById('lscope-estimate'))document.getElementById('lscope-estimate').textContent=estimate;
+  if(document.getElementById('lscope-questions'))document.getElementById('lscope-questions').textContent=questions;
+}
+
+/* HOME LAB */
+function updateICE(){
+  const i=+document.getElementById('impact').value,c=+document.getElementById('confidence').value,e=+document.getElementById('ease').value;
+  document.getElementById('impact-val').textContent=i;document.getElementById('confidence-val').textContent=c;document.getElementById('ease-val').textContent=e;
+  const score=((i+c+e)/3).toFixed(1);document.getElementById('ice-score').textContent=score;
+  const s=parseFloat(score),lbl=s<4?'Low priority — skip or defer':s<6?'Prioritise if time allows':s<8?'Strong candidate — get this in sprint':'Ship this now';
+  document.getElementById('ice-label').textContent='ICE Score — '+lbl;
+}
+function selectQuiz(btn,type,desc){document.querySelectorAll('.quiz-option').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');document.getElementById('quiz-type').textContent=type;document.getElementById('quiz-desc').textContent=desc;document.getElementById('quiz-result').classList.add('show');}
+function updateRetention(){
+  const days=['d1','d7','d14','d30'],vals=days.map(d=>Math.min(100,Math.max(0,parseInt(document.getElementById('r-'+d).value)||0)));
+  const colors=['var(--violet)','var(--violet-light)','var(--coral)','var(--coral-light)'];
+  days.forEach((d,i)=>{document.getElementById('bar-'+d).style.height=vals[i]+'%';document.getElementById('bar-'+d).style.background=colors[i];});
+  const d17=vals[0]>0?Math.round(((vals[0]-vals[1])/vals[0])*100):0;
+  let ins='';
+  if(vals[0]<40)ins='D1 retention of '+vals[0]+'% is below benchmark.';
+  else if(d17>60)ins='D1 to D7 drop of '+d17+'% is high.';
+  else if(vals[3]>25)ins='D30 retention of '+vals[3]+'% is strong.';
+  else ins='D1 to D7 drop is '+d17+'% — focus on aha moment in first session.';
+  document.getElementById('retention-insight').textContent=ins;
+}
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
